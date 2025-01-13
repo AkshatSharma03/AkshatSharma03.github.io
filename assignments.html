@@ -5,8 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignments</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Basic Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #2c3e50;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ecf0f1;
+            font-size: 1.1em;
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover, nav ul li a.active {
+            background-color: #1e90ff;
+            transition: 0.3s;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: #2c3e50;
+        }
+
+        .assignment, .course-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-left: 5px solid #1e90ff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            margin-top: 40px;
+        }
+
+        a {
+            color: #1e90ff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
+
 <body>
+
+    <!-- Navigation Bar -->
     <header>
         <nav>
             <ul>
@@ -14,128 +97,88 @@
                 <li><a href="work-experience.html">Work Experience</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="assignments.html">Assignments</a></li>
+                <li><a href="assignments.html" class="active">Assignments</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- Assignments Section -->
     <section class="container">
-        <h1>Assignments</h1>
-        <div class="assignment">
-            <h2>Assignment 0</h2>
-            <p>This is a Python script that adds two numbers together and prints the sum.</p>
-            <a href="https://github.com/AkshatSharma03/akshat14-assignment-0.git" target="_blank">Github Link</a>
-            
-        </div>
-       
-        <div class="assignment">
-            
-            <h2>Assignment 1</h2>
-            <p>This Assignment finds the optimal location to stand in the cds building at BU while waiting for one of the 6 elevators.</p>
-            <a href="https://github.com/AkshatSharma03/akshat14-assignment1/tree/main" target="_blank">Github Link</a>
-        </div>
+        <h1>📚 Assignments</h1>
 
-        <div class="assignment">
-            
-            <h2>Assignment 2</h2>
-            <p>This Assignment develops an interactive web application that demonstrates the KMeans clustering algorithm using various initialization methods. This project allows me to explore the impact of different initialization strategies on the clustering outcome.</p>
-            <a href="https://github.com/AkshatSharma03/akshat14-assignment-2/tree/main" target="_blank">Github Link</a><br>
-            
-            <a href="https://youtu.be/Uve7_Xx8nSc" target="_blank">Youtube link</a>
-        </div>
+        <!-- CS506 Data Science Tools and Applications -->
+        <div class="course-section">
+            <h2>🖥️ CS506: Data Science Tools and Applications</h2>
 
-        <div class="assignment">
-            
-            <h2>Assignment 3</h2>
-            <p>In this assignment i implemented SVD algorithm from scratch.</p>
-            <a href="https://github.com/AkshatSharma03/akshat14-assignment-3" target="_blank">Github Link</a><br>
-            
-        
-        </div>
-        <div class="assignment">
-            
-            <h2>Assignment 4</h2>
-            <p>LSA.</p>
-            <a href="https://github.com/AkshatSharma03/akshat14-assignment-4" target="_blank">Github Link</a><br>
-            <a href="https://youtu.be/lqP0bASzrus" target="_blank">Youtube link</a>
-            
-        
-        </div>
-        <div class="assignment">
-            
-            <h2>Assignment 5</h2>
-            <p>Predicting Customer Churn Using KNN</p>
-            <a href="https://github.com/AkshatSharma03/akshat14-assignment-5/tree/main" target="_blank">Github Link</a><br>
-         
-            
-        
-        </div>
-         <div class="assignment">
-            
-            <h2>Midterm</h2>
-            <p>CS506 midterm</p>
-            <a href="https://github.com/AkshatSharma03/akshat14-midterm" target="_blank">Github Link</a><br>
-         
-            
-        
-        </div>
-        <div class="assignment">
-            
-            <h2>Assignment 7</h2>
-            <p>CS506 assginment 7</p>
-            <a href="https://github.com/AkshatSharma03/akshat14-assignment-7" target="_blank">Github Link</a><br>
-             <a href="https://youtu.be/7_S2QjqFZus" target="_blank">Youtube link</a>
-         
-            
-        
-        </div>
+            <!-- Assignment 0 -->
+            <div class="assignment">
+                <h3>Assignment 0: Python Basics</h3>
+                <p>Python script that adds two numbers together and prints the sum.</p>
+                <a href="https://github.com/AkshatSharma03/akshat14-assignment-0.git" target="_blank">GitHub Link</a>
+            </div>
 
-        <div class="assignment">
-            
-            <h2>Assignment 8</h2>
-            <p>logical regressiong</p>
-            <a href="https://github.com/AkshatSharma03/akshat14-assignment-8" target="_blank">Github Link</a><br>
-             <a href="https://youtu.be/pJmbpBTbGE8" target="_blank">Youtube link</a>
-         
-            
-        
-        </div>
-        <div class="assignment">
-            
-            <h2>Assignment 9</h2>
-            <p>neural networks</p>
-            <a href="https://github.com/AkshatSharma03/akshat14-assignment-9" target="_blank">Github Link</a><br>
-             <a href="https://youtu.be/tfMTZULkGwE" target="_blank">Youtube link</a>
-         
-            
-        
-        </div>
-         <div class="assignment">
-            
-            <h2>Assignment 10</h2>
-            <p>google image search</p>
-            <a href="https://github.com/AkshatSharma03/akshat14-assignment-10" target="_blank">Github Link</a><br>
-             <a href="https://youtu.be/6LBo2GHHiPg" target="_blank">Youtube link</a>
-         
-            
-        
-        </div>
-         <div class="assignment">
-            
-            <h2>ExtraCredit</h2>
-            <p>CS506 ExtraCredit</p>
-            <a href="https://github.com/AkshatSharma03/akshat14-extracredit" target="_blank">Github Link</a><br>
-         
-            
-        
+            <!-- Assignment 1 -->
+            <div class="assignment">
+                <h3>Assignment 1: Elevator Optimization</h3>
+                <p>Finds the optimal location to stand in the CDS building at BU while waiting for one of the 6 elevators.</p>
+                <a href="https://github.com/AkshatSharma03/akshat14-assignment1/tree/main" target="_blank">GitHub Link</a>
+            </div>
+
+            <!-- Assignment 2 -->
+            <div class="assignment">
+                <h3>Assignment 2: KMeans Clustering Visualization</h3>
+                <p>Interactive web app demonstrating KMeans clustering using various initialization methods.</p>
+                <a href="https://github.com/AkshatSharma03/akshat14-assignment-2/tree/main" target="_blank">GitHub Link</a> | 
+                <a href="https://youtu.be/Uve7_Xx8nSc" target="_blank">YouTube Demo</a>
+            </div>
+
+            <!-- Assignment 3 -->
+            <div class="assignment">
+                <h3>Assignment 3: Singular Value Decomposition (SVD)</h3>
+                <p>Implemented the SVD algorithm from scratch.</p>
+                <a href="https://github.com/AkshatSharma03/akshat14-assignment-3" target="_blank">GitHub Link</a>
+            </div>
+
+            <!-- Assignment 4 -->
+            <div class="assignment">
+                <h3>Assignment 4: Latent Semantic Analysis (LSA)</h3>
+                <p>Explored text mining using LSA.</p>
+                <a href="https://github.com/AkshatSharma03/akshat14-assignment-4" target="_blank">GitHub Link</a> | 
+                <a href="https://youtu.be/lqP0bASzrus" target="_blank">YouTube Demo</a>
+            </div>
+
+            <!-- Assignment 5 -->
+            <div class="assignment">
+                <h3>Assignment 5: Customer Churn Prediction (KNN)</h3>
+                <p>Predicted customer churn using K-Nearest Neighbors algorithm.</p>
+                <a href="https://github.com/AkshatSharma03/akshat14-assignment-5/tree/main" target="_blank">GitHub Link</a>
+            </div>
+
+            <!-- Midterm Project -->
+            <div class="assignment">
+                <h3>Midterm Project</h3>
+                <p>Comprehensive project covering CS506 concepts.</p>
+                <a href="https://github.com/AkshatSharma03/akshat14-midterm" target="_blank">GitHub Link</a>
+            </div>
+
+            <!-- Assignments 7-10 and Extra Credit -->
+            <div class="assignment">
+                <h3>Advanced Assignments & Extra Credit</h3>
+                <ul>
+                    <li><a href="https://github.com/AkshatSharma03/akshat14-assignment-7" target="_blank">Assignment 7: Advanced Analysis</a></li>
+                    <li><a href="https://github.com/AkshatSharma03/akshat14-assignment-8" target="_blank">Assignment 8: Logistic Regression</a></li>
+                    <li><a href="https://github.com/AkshatSharma03/akshat14-assignment-9" target="_blank">Assignment 9: Neural Networks</a></li>
+                    <li><a href="https://github.com/AkshatSharma03/akshat14-assignment-10" target="_blank">Assignment 10: Google Image Search</a></li>
+                    <li><a href="https://github.com/AkshatSharma03/akshat14-extracredit" target="_blank">Extra Credit Project</a></li>
+                </ul>
+            </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
-        <div class="container">
-            <p>&copy; 2024 Akshat Sharma. All rights reserved.</p>
-        </div>
+        <p>&copy; 2024 Akshat Sharma. All rights reserved.</p>
     </footer>
+
 </body>
 </html>
-
