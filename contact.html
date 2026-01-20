@@ -3,101 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Contact | Akshat Sharma</title>
     <style>
-        /* Global Styling */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f5f5f5;
-            margin: 0;
-            padding: 0;
-            color: #333;
+        /* MASTER CSS - SYNCHRONIZED ACROSS ALL PAGES */
+        :root {
+            --primary: #2c3e50;
+            --accent: #1e90ff;
+            --bg: #f5f5f5;
+            --card-bg: #ffffff;
+            --text: #333;
+            --nav-text: #ecf0f1;
         }
 
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            margin: 0;
+            padding: 0;
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        /* MASTER HEADER */
         header {
-            background-color: #2c3e50;
+            background-color: var(--primary);
             padding: 20px 0;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         nav ul {
             list-style: none;
             display: flex;
             justify-content: center;
-            padding: 0;
             margin: 0;
+            padding: 0;
         }
 
-        nav ul li {
-            margin: 0 20px;
-        }
+        nav ul li { margin: 0 15px; }
 
         nav ul li a {
             text-decoration: none;
-            color: #ecf0f1;
+            color: var(--nav-text);
             font-size: 1.1em;
-            padding: 8px 15px;
+            font-weight: 500;
+            padding: 10px 15px;
             border-radius: 5px;
+            transition: all 0.3s ease;
         }
 
         nav ul li a:hover, nav ul li a.active {
-            background-color: #1e90ff;
-            transition: 0.3s;
+            background-color: var(--accent);
+            color: white;
         }
 
+        /* CONTACT CONTAINER */
         .container {
-            max-width: 800px;
-            margin: 60px auto;
-            background-color: #fff;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 700px;
+            margin: 80px auto;
+            background-color: var(--card-bg);
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
 
-        h1 {
-            color: #2c3e50;
-            margin-bottom: 20px;
+        h1 { font-size: 2.5em; color: var(--primary); margin-bottom: 20px; }
+        p.lead { font-size: 1.2em; color: #666; margin-bottom: 40px; }
+
+        .contact-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
         }
 
-        .contact-info {
-            font-size: 1.1em;
-            margin: 20px 0;
-        }
-
-        .contact-info a {
+        .contact-card {
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            border: 1px solid #eee;
+            border-radius: 8px;
             text-decoration: none;
-            color: #1e90ff;
+            color: var(--primary);
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
-            margin: 10px 0;
+            gap: 15px;
+            transition: 0.3s;
+            font-weight: 600;
+            font-size: 1.1em;
         }
 
-        .contact-info a:hover {
-            text-decoration: underline;
+        .contact-card:hover {
+            border-color: var(--accent);
+            background-color: #f0f7ff;
+            transform: translateY(-2px);
+            color: var(--accent);
         }
 
         .contact-icon {
-            width: 30px;
-            height: 30px;
+            width: 32px;
+            height: 32px;
         }
 
         footer {
             text-align: center;
-            padding: 20px;
-            background-color: #2c3e50;
-            color: #ecf0f1;
-            margin-top: 40px;
+            padding: 30px;
+            background-color: var(--primary);
+            color: var(--nav-text);
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 30px; margin: 20px auto; }
+            footer { position: relative; margin-top: 40px; }
         }
     </style>
 </head>
-
 <body>
 
-    <!-- Navigation Bar -->
     <header>
         <nav>
             <ul>
@@ -110,28 +139,33 @@
         </nav>
     </header>
 
-    <!-- Contact Section -->
-    <section class="container">
+    <div class="container">
         <h1>📬 Get in Touch</h1>
+        <p class="lead">I'm currently looking for new opportunities in AI Systems and Cloud Engineering. Let's build something impactful together.</p>
         
-        <div class="contact-info">
+        <div class="contact-methods">
             <!-- Email -->
-            <a href="mailto:akshat1.sunil@gmail.com" target="_blank">
-                <img src="https://img.icons8.com/ios-filled/50/1e90ff/email.png" alt="Email Icon" class="contact-icon">
+            <a href="mailto:akshat1.sunil@gmail.com" class="contact-card">
+                <img src="https://img.icons8.com/ios-filled/50/1e90ff/email.png" alt="Email" class="contact-icon">
                 akshat1.sunil@gmail.com
             </a>
 
             <!-- LinkedIn -->
-            <a href="https://www.linkedin.com/in/akshat-sharma-599278236/" target="_blank">
-                <img src="https://img.icons8.com/ios-filled/50/1e90ff/linkedin.png" alt="LinkedIn Icon" class="contact-icon">
-                linkedin.com/in/akshatsharma
+            <a href="https://www.linkedin.com/in/sharma-akshat03/" target="_blank" class="contact-card">
+                <img src="https://img.icons8.com/ios-filled/50/1e90ff/linkedin.png" alt="LinkedIn" class="contact-icon">
+                linkedin.com/in/sharma-akshat03
+            </a>
+
+            <!-- GitHub -->
+            <a href="https://github.com/akshat-sharma" target="_blank" class="contact-card">
+                <img src="https://img.icons8.com/ios-filled/50/1e90ff/github.png" alt="GitHub" class="contact-icon">
+                github.com/akshat-sharma
             </a>
         </div>
-    </section>
+    </div>
 
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Akshat Sharma. All rights reserved.</p>
+        <p>&copy; 2026 Akshat Sharma. All rights reserved.</p>
     </footer>
 
 </body>
