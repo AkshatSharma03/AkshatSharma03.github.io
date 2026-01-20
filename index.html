@@ -14,43 +14,46 @@
             --nav-text: #ecf0f1;
         }
 
+        * { box-sizing: border-box; }
+
         body {
             font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             background-color: var(--bg);
             margin: 0;
             padding: 0;
             color: var(--text);
-            line-height: 1.8;
+            line-height: 1.6;
         }
 
-        /* MASTER HEADER - EXACTLY SAME ON ALL PAGES */
+        /* RESPONSIVE HEADER */
         header {
             background-color: var(--primary);
-            padding: 20px 0;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            padding: 15px 0;
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
         }
 
         nav ul {
             list-style: none;
             display: flex;
             justify-content: center;
+            flex-wrap: wrap; /* Allows nav to wrap on mobile */
             margin: 0;
             padding: 0;
         }
 
-        nav ul li { margin: 0 15px; }
+        nav ul li { margin: 5px 10px; }
 
         nav ul li a {
             text-decoration: none;
             color: var(--nav-text);
-            font-size: 1.1em;
+            font-size: 0.95em;
             font-weight: 500;
-            padding: 10px 15px;
+            padding: 8px 12px;
             border-radius: 5px;
-            transition: all 0.3s ease;
+            transition: 0.3s;
         }
 
         nav ul li a:hover, nav ul li a.active {
@@ -58,18 +61,19 @@
             color: white;
         }
 
-        /* CONTENT CONTAINER */
+        /* RESPONSIVE CONTAINER */
         .container {
+            width: 95%;
             max-width: 950px;
-            margin: 50px auto;
+            margin: 30px auto;
             background-color: var(--card-bg);
-            padding: 50px;
+            padding: 40px;
             border-radius: 12px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
-        h1 { font-size: 2.8em; color: var(--primary); margin-bottom: 10px; }
-        h2 { font-size: 1.9em; color: var(--primary); border-bottom: 2px solid var(--accent); padding-bottom: 10px; margin-top: 40px; }
+        h1 { font-size: 2.2em; color: var(--primary); margin-bottom: 10px; }
+        h2 { font-size: 1.6em; color: var(--primary); border-bottom: 2px solid var(--accent); padding-bottom: 8px; margin-top: 30px; }
         
         .tagline {
             display: inline-block;
@@ -78,48 +82,44 @@
             padding: 5px 15px;
             border-radius: 50px;
             font-weight: bold;
-            font-size: 0.95em;
-            margin-bottom: 20px;
+            font-size: 0.85em;
+            margin-bottom: 15px;
         }
 
-        .section { padding: 20px 0; }
-        
-        /* GRID STYLES */
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 20px; }
-        .grid-item h3 { margin-top: 0; color: var(--accent); }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 
-        ul { padding-left: 20px; }
-        li { margin-bottom: 10px; }
+        /* MOBILE BREAKPOINTS */
+        @media (max-width: 768px) {
+            h1 { font-size: 1.8em; }
+            .container { padding: 25px; margin: 15px auto; }
+            .grid { grid-template-columns: 1fr; } /* Stacks columns on mobile */
+            nav ul li a { font-size: 0.85em; padding: 6px 10px; }
+        }
 
         .project-highlight {
             background: #f9f9f9;
-            padding: 20px;
+            padding: 15px;
             border-left: 5px solid var(--accent);
             border-radius: 5px;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+            font-size: 0.95em;
         }
 
         footer {
             text-align: center;
-            padding: 30px;
+            padding: 20px;
             background-color: var(--primary);
             color: var(--nav-text);
-            margin-top: 50px;
-        }
-
-        @media (max-width: 768px) {
-            .grid { grid-template-columns: 1fr; }
-            .container { padding: 30px; margin: 20px; }
+            font-size: 0.9em;
         }
     </style>
 </head>
 <body>
-
     <header>
         <nav>
             <ul>
-                <li><a href="index.html" class="active">About Me</a></li>
-                <li><a href="work-experience.html">Work Experience</a></li>
+                <li><a href="index.html" class="active">About</a></li>
+                <li><a href="work-experience.html">Experience</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="assignments.html">Assignments</a></li>
@@ -129,69 +129,44 @@
 
     <div class="container">
         <div class="hero">
-            <span class="tagline">International AI Advisor | CS & Economics @ Boston University</span>
+            <span class="tagline">International AI Advisor | BU CS & Economics</span>
             <h1>👋 Hi, I'm <strong>Akshat Sharma</strong></h1>
-            <p>I architect production-grade <strong>AI Systems</strong> and <strong>Cloud Solutions</strong>. I specialize in bridging the gap between cutting-edge LLM research and economically scalable enterprise infrastructure.</p>
+            <p><strong>AI Systems & Cloud Engineer</strong> specializing in production-grade RAG pipelines and economically scalable infrastructure.</p>
         </div>
 
         <div class="section">
             <h2>🚀 The Full Picture</h2>
-            <p>I am a dedicated <strong>AI Systems Engineer</strong> and <strong>Azure Cloud Practitioner</strong> focused on developing data-driven solutions. My combined background in Computer Science and Economics allows me to solve impactful problems through technology, ensuring that AI implementations are both technically sound and financially viable. Currently, I serve as an <strong>AI Affiliate</strong> at BU, leading governance initiatives to modernize education for the GenAI era.</p>
+            <p>I bridge the gap between <strong>Computer Science</strong> research and <strong>Economics</strong>-driven system optimization. Currently, as an <strong>AI Affiliate</strong> at BU, I architect governance frameworks and transition curricula into AI-resilient environments.</p>
         </div>
 
         <div class="section">
             <h2>🛠️ Technical Ecosystem</h2>
             <div class="grid">
-                <div class="grid-item">
-                    <h3>Engineering & AI</h3>
-                    <ul>
-                        <li><strong>LLMOps:</strong> LangChain, LlamaIndex, RAG Pipelines</li>
-                        <li><strong>ML Tools:</strong> PyTorch, Scikit-learn, OpenAI APIs</li>
-                        <li><strong>Languages:</strong> Python, JavaScript/TS, Java, SQL</li>
+                <div>
+                    <strong>AI & Engineering</strong>
+                    <ul style="font-size: 0.9em;">
+                        <li>LangChain, LlamaIndex, RAG</li>
+                        <li>Python, Java, JavaScript</li>
+                        <li>PyTorch, Scikit-learn</li>
                     </ul>
                 </div>
-                <div class="grid-item">
-                    <h3>Cloud & Backend</h3>
-                    <ul>
-                        <li><strong>Cloud:</strong> AWS (S3, Lambda, IAM), Azure</li>
-                        <li><strong>Ops:</strong> Docker, Kubernetes, CI/CD, Git</li>
-                        <li><strong>Architecture:</strong> Next.js, Node.js, FastAPI, FAISS</li>
+                <div>
+                    <strong>Cloud & DevOps</strong>
+                    <ul style="font-size: 0.9em;">
+                        <li>AWS (S3, Lambda, IAM)</li>
+                        <li>Azure Practitioner</li>
+                        <li>Docker & Kubernetes</li>
                     </ul>
                 </div>
             </div>
         </div>
 
         <div class="section">
-            <h2>🏆 High-Impact Work</h2>
-            <div class="project-highlight">
-                <strong>Terrier GPT (Institutional RAG):</strong> Engineered a production-grade pipeline to vectorize and index 5,000+ university documents, powering an AI assistant for 10,000+ interactions.
-            </div>
-            <div class="project-highlight">
-                <strong>Kazakhstan Government Advisory:</strong> Invited as an international speaker to advise state stakeholders on GenAI adoption and cloud-native infrastructure strategy.
-            </div>
-            <div class="project-highlight">
-                <strong>GoNiva (Innovation Pathway):</strong> Co-founded an AI travel platform accepted into the <a href="https://www.bu.edu/innovate/profile/goniva/" target="_blank">Innovate@BU Pathway</a>.
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>📫 How to Reach Me</h2>
-            <ul>
-                <li><strong>Email:</strong> <a href="mailto:akshat1.sunil@gmail.com">akshat1.sunil@gmail.com</a></li>
-                <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sharma-akshat03/" target="_blank">linkedin.com/in/sharma-akshat03/</a></li>
-                <li><strong>GitHub:</strong> <a href="https://github.com/akshat-sharma" target="_blank">github.com/akshat-sharma</a></li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>⚡ Fun Fact</h2>
-            <p>I am passionate about "Cross-Border Knowledge Transfer"—sharing AI expertise globally to help governments and institutions navigate the complexities of digital transformation.</p>
+            <h2>🏆 Highlights</h2>
+            <div class="project-highlight"><strong>Kazakhstan Govt Advisory:</strong> International speaker on state-level AI adoption.</div>
+            <div class="project-highlight"><strong>Terrier GPT:</strong> Built RAG pipeline indexing 5,000+ docs at BU.</div>
         </div>
     </div>
-
-    <footer>
-        <p>&copy; 2026 Akshat Sharma. All rights reserved.</p>
-    </footer>
-
+    <footer><p>&copy; 2026 Akshat Sharma</p></footer>
 </body>
 </html>
