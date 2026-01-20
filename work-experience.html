@@ -3,23 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Work Experience - Akshat Sharma</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Work Experience | Akshat Sharma</title>
     <style>
-        /* Body Styling */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f5f5f5;
-            margin: 0;
-            padding: 0;
-            color: #333;
+        :root {
+            --primary: #2c3e50;
+            --accent: #1e90ff;
+            --bg: #f8f9fa;
+            --text: #333;
         }
 
-        /* Header and Navigation Bar */
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg);
+            margin: 0;
+            padding: 0;
+            color: var(--text);
+            line-height: 1.6;
+        }
+
         header {
-            background-color: #2c3e50;
-            padding: 20px 0;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            background-color: var(--primary);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         nav ul {
@@ -30,84 +38,118 @@
             padding: 0;
         }
 
-        nav ul li {
-            margin: 0 20px;
-        }
+        nav ul li { margin: 0 15px; }
 
         nav ul li a {
             text-decoration: none;
             color: #ecf0f1;
-            font-size: 1.1em;
-            padding: 8px 15px;
-            border-radius: 5px;
-        }
-
-        nav ul li a:hover, nav ul li a.active {
-            background-color: #1e90ff;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 4px;
             transition: 0.3s;
         }
 
-        /* Container */
+        nav ul li a:hover, nav ul li a.active {
+            background-color: var(--accent);
+            color: white;
+        }
+
         .container {
             max-width: 900px;
             margin: 50px auto;
             background-color: #fff;
             padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
         }
 
-        /* Collapsible Buttons */
+        h1 {
+            color: var(--primary);
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        /* Collapsible Styling */
         .collapsible {
-            background-color: #1e90ff;
-            color: white;
+            background-color: #fff;
+            color: var(--primary);
             cursor: pointer;
-            padding: 15px;
+            padding: 20px;
             width: 100%;
-            border: none;
+            border: 1px solid #eee;
             text-align: left;
             outline: none;
-            font-size: 1.1em;
-            border-radius: 5px;
-            margin-top: 10px;
+            font-size: 1.2em;
+            font-weight: 600;
+            border-radius: 8px;
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: 0.2s;
         }
 
         .collapsible:hover {
-            background-color: #0d6efd;
+            border-color: var(--accent);
+            background-color: #f0f7ff;
         }
 
-        .active, .collapsible:focus {
-            background-color: #0b5ed7;
+        .collapsible:after {
+            content: '\002B';
+            color: var(--accent);
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+
+        .active:after {
+            content: "\2212";
+        }
+
+        .active {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            background-color: #f0f7ff;
         }
 
         .content {
-            padding: 0 18px;
+            padding: 0 25px;
             display: none;
             overflow: hidden;
-            background-color: #f9f9f9;
-            border-radius: 5px;
-            margin-top: 5px;
-            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            border: 1px solid #eee;
+            border-top: none;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+
+        .content p.meta {
+            color: var(--accent);
+            font-weight: 500;
+            margin-top: 15px;
+            font-size: 0.95em;
         }
 
         .content ul {
-            padding-left: 20px;
-            line-height: 1.8;
+            padding-bottom: 20px;
+        }
+
+        .content li {
+            margin-bottom: 10px;
         }
 
         footer {
             text-align: center;
-            padding: 20px;
-            background-color: #2c3e50;
+            padding: 30px;
+            background-color: var(--primary);
             color: #ecf0f1;
-            margin-top: 40px;
+            margin-top: 60px;
         }
     </style>
 </head>
 
 <body>
 
-    <!-- Navigation Bar -->
     <header>
         <nav>
             <ul>
@@ -120,64 +162,74 @@
         </nav>
     </header>
 
-    <!-- Work Experience Section -->
-    <section class="container">
+    <main class="container">
         <h1>💼 Work Experience</h1>
 
-        <!-- Research Assistant -->
+        <!-- AI Affiliate -->
+        <button class="collapsible">🤖 AI Affiliate (Governance) @ Boston University</button>
+        <div class="content">
+            <p class="meta">Jan 2026 – Present | Boston, MA</p>
+            <ul>
+                <li>Collaborating with faculty to transition curricula to <strong>"AI-resilient"</strong> frameworks by integrating human-in-the-loop workflows.</li>
+                <li>Mentoring undergraduates on <strong>ethical LLM application</strong>, focusing on iterative prompting, bias detection, and academic integrity.</li>
+                <li>Conducting research on AI usage patterns to inform long-term University pedagogy and ethical frameworks.</li>
+            </ul>
+        </div>
+
+        <!-- IT Help Center / Terrier GPT -->
+        <button class="collapsible">🚀 AI Developer (Terrier GPT) @ BU IT Help Center</button>
+        <div class="content">
+            <p class="meta">Aug 2022 – Sept 2025 | Boston, MA</p>
+            <ul>
+                <li>Engineered a production-grade <strong>RAG pipeline</strong> to vectorize and index 5,000+ university documents into a FAISS database for an internal AI assistant.</li>
+                <li>Developed scalable backend logic to support <strong>10,000+ user interactions</strong>, leveraging insights from support tickets to define product requirements.</li>
+                <li>Managed technical troubleshooting across hardware and cloud networks while transitioning core duties toward AI development.</li>
+            </ul>
+        </div>
+
+        <!-- Batman Lab -->
         <button class="collapsible">🔬 Research Assistant @ Batman Lab, Boston University</button>
         <div class="content">
-            <p><em>Jan 2024 – July 2024 | Boston, MA</em></p>
+            <p class="meta">Jan 2024 – July 2024 | Boston, MA</p>
             <ul>
-                <li>Enhanced multimodal AI models for breast cancer detection, fine-tuning <strong>Mammo-CLIP</strong> and generating pseudo-labels with OpenAI’s CLIP for improved medical imaging accuracy.</li>
-                <li>Conducted research on vision-language models, improving model performance on specialized medical datasets by 15%.</li>
+                <li>Built machine learning models (PyTorch, Scikit-learn) for medical prediction systems, improving diagnostic accuracy by <strong>12%</strong>.</li>
+                <li>Applied <strong>bias-detection methods</strong> to state-of-the-art breast cancer risk models (Mirai) to enhance clinical accuracy.</li>
+                <li>Labeled 40,000+ image datasets using OpenAI’s CLIP model for zero-shot classification and benchmarking.</li>
             </ul>
         </div>
 
-        <!-- Market research and Finance Intern-->
-        <button class="collapsible">💻 Market Research and Finance Intern @ Beyond Square Solutionss</button>
+        <!-- Beyond Square -->
+        <button class="collapsible">📊 Market Research & UX Intern @ Beyond Square Solutions</button>
         <div class="content">
-            <p><em>June 2024 – August 2024 | Remote</em></p>
+            <p class="meta">June 2024 – Aug 2024 | Pune, India / Remote</p>
             <ul>
-                <li>Developed and implemented US market expansion strategy for Finalyzer EPM software, conducting in-depth market research and analyzing industry trends.</li>
-                <li>Identified key growth opportunities, collaborated with finance and marketing teams to tailor software for US deployment and adoption</li>
-                <li>•	Enhanced strategic planning, analytical, and cross-functional collaboration skills by bridging academic knowledge in Computer Science and Economics with practical business applications</li>
+                <li>Synthesized feedback from 15+ potential client interviews into actionable <strong>product requirements</strong> for U.S. localization.</li>
+                <li>Refined technical onboarding resources and created <strong>concise API documentation</strong>, decreasing developer support tickets by 25%.</li>
+                <li>Influenced UI redesigns that improved task completion rates in mock-ups by 25%.</li>
             </ul>
         </div>
 
-        <!-- IT support specialist -->
-        <button class="collapsible">📊 IT support specialist @ IT Help Center, Boston University</button>
+        <!-- Peer Counselor -->
+        <button class="collapsible">🤝 Peer Counselor @ Orientation, Boston University</button>
         <div class="content">
-            <p><em>August 2024 – Present | Boston, Ma</em></p>
+            <p class="meta">May 2023 – Jan 2024 | Boston, MA</p>
             <ul>
-                <li>Resolving technical issues and troubleshooting problems with hardware, software, and networks.</li>
-                <li>Gave technical assistance to customers or internal staff, as needed.</li>
-            </ul>
-        </div>
-         <!-- Peer Counselor -->
-        <button class="collapsible">📊 Peer Counselor @ Orientation, Boston University</button>
-        <div class="content">
-            <p><em>May 2023 – Jan 2024 | Boston, Ma</em></p>
-            <ul>
-                <li>Led orientation groups of up to 60 students as a university ambassador, fostering a positive and welcoming environment.</li>
+                <li>Led orientation groups of up to <strong>60 students</strong> as a university ambassador, facilitating successful student transitions.</li>
+                <li>Coordinated large-scale events and provided peer-level mentorship on academic and social integration.</li>
             </ul>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Akshat Sharma. All rights reserved.</p>
+        <p>&copy; 2026 Akshat Sharma. All rights reserved.</p>
     </footer>
 
-    <!-- JavaScript for Collapsible Functionality -->
     <script>
         const collapsibles = document.querySelectorAll(".collapsible");
-
         collapsibles.forEach(button => {
             button.addEventListener("click", function () {
                 this.classList.toggle("active");
                 const content = this.nextElementSibling;
-
                 if (content.style.display === "block") {
                     content.style.display = "none";
                 } else {
