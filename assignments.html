@@ -3,84 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignments | Akshat Sharma</title>
+    <title>Academic Portfolio | Akshat Sharma</title>
     <style>
-        /* MASTER CSS - SYNCHRONIZED ACROSS ALL PAGES */
-        :root {
-            --primary: #2c3e50;
-            --accent: #1e90ff;
-            --bg: #f5f5f5;
-            --card-bg: #ffffff;
-            --text: #333;
-            --nav-text: #ecf0f1;
-        }
+        /* MASTER SHARED CSS */
+        :root { --primary: #2c3e50; --accent: #1e90ff; --bg: #f5f5f5; --card-bg: #ffffff; --text: #333; --nav-text: #ecf0f1; }
+        * { box-sizing: border-box; }
+        body { font-family: 'Segoe UI', sans-serif; background: var(--bg); margin: 0; color: var(--text); line-height: 1.6; }
+        header { background-color: var(--primary); padding: 15px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.2); }
+        nav ul { list-style: none; display: flex; justify-content: center; flex-wrap: wrap; margin: 0; padding: 0; }
+        nav ul li { margin: 5px 10px; }
+        nav ul li a { text-decoration: none; color: var(--nav-text); font-size: 0.9em; font-weight: 500; padding: 8px 12px; border-radius: 5px; transition: 0.3s; }
+        nav ul li a.active { background: var(--accent); color: white; }
 
-        body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg);
-            margin: 0;
-            padding: 0;
-            color: var(--text);
-            line-height: 1.8;
-        }
+        /* CONTAINER & GRIDS */
+        .container { width: 95%; max-width: 950px; margin: 30px auto; background: var(--card-bg); padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        h1 { color: var(--primary); font-size: 2.2em; text-align: center; }
+        h2 { color: var(--primary); font-size: 1.6em; border-bottom: 2px solid var(--accent); padding-bottom: 10px; margin-top: 40px; }
 
-        /* MASTER HEADER */
-        header {
-            background-color: var(--primary);
-            padding: 20px 0;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav ul li { margin: 0 15px; }
-
-        nav ul li a {
-            text-decoration: none;
-            color: var(--nav-text);
-            font-size: 1.1em;
-            font-weight: 500;
-            padding: 10px 15px;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-        }
-
-        nav ul li a:hover, nav ul li a.active {
-            background-color: var(--accent);
-            color: white;
-        }
-
-        /* ASSIGNMENTS CONTAINER */
-        .container {
-            max-width: 950px;
-            margin: 50px auto;
-            background-color: var(--card-bg);
-            padding: 50px;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 { font-size: 2.5em; color: var(--primary); text-align: center; margin-bottom: 30px; }
-        h2 { font-size: 1.8em; color: var(--primary); border-bottom: 2px solid var(--accent); padding-bottom: 10px; margin-top: 40px; }
-
-        .course-description {
-            background: #f0f7ff;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-            border-left: 5px solid var(--accent);
-        }
-
-        /* ASSIGNMENT CARDS */
         .assignment-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -89,180 +28,99 @@
         }
 
         .assignment-card {
-            background: #fff;
-            border: 1px solid #eee;
-            padding: 20px;
-            border-radius: 8px;
-            transition: 0.3s;
+            background: #fff; border: 1px solid #eee; padding: 20px; border-radius: 8px; transition: 0.3s;
         }
 
-        .assignment-card:hover {
-            border-color: var(--accent);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transform: translateY(-2px);
-        }
+        .assignment-card:hover { border-color: var(--accent); transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        
+        .assignment-card h3 { margin: 0 0 10px 0; font-size: 1.1em; color: var(--primary); }
+        .assignment-card p { font-size: 0.9em; color: #666; margin-bottom: 15px; }
+        
+        .links { display: flex; gap: 15px; font-weight: bold; font-size: 0.85em; }
+        .links a { color: var(--accent); text-decoration: none; }
 
-        .assignment-card h3 {
-            margin-top: 0;
-            color: var(--primary);
-            font-size: 1.2em;
-        }
-
-        .assignment-card p {
-            font-size: 0.95em;
-            color: #666;
-            margin-bottom: 15px;
-        }
-
-        .links {
-            display: flex;
-            gap: 15px;
-            font-weight: 600;
-            font-size: 0.9em;
-        }
-
-        .links a {
-            color: var(--accent);
-            text-decoration: none;
-        }
-
-        .links a:hover { text-decoration: underline; }
-
-        .advanced-list {
-            list-style: none;
-            padding: 0;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-        }
-
-        .advanced-list li a {
-            display: block;
-            background: #f9f9f9;
-            padding: 10px;
-            border-radius: 5px;
-            text-decoration: none;
-            color: var(--primary);
-            font-size: 0.9em;
-            border: 1px solid #eee;
-            transition: 0.2s;
-        }
-
-        .advanced-list li a:hover {
-            background: var(--accent);
-            color: white;
-            border-color: var(--accent);
-        }
-
-        footer {
-            text-align: center;
-            padding: 30px;
-            background-color: var(--primary);
-            color: var(--nav-text);
-            margin-top: 60px;
-        }
-
+        /* MOBILE OPTIMIZATION */
         @media (max-width: 768px) {
-            .container { padding: 30px; margin: 20px; }
-            .assignment-grid, .advanced-list { grid-template-columns: 1fr; }
+            .container { padding: 25px; }
+            .assignment-grid { grid-template-columns: 1fr; }
+            h1 { font-size: 1.8em; }
         }
+
+        footer { text-align: center; padding: 20px; background: var(--primary); color: #ecf0f1; margin-top: 50px; }
     </style>
 </head>
 <body>
-
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">About Me</a></li>
-                <li><a href="work-experience.html">Work Experience</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="assignments.html" class="active">Assignments</a></li>
-            </ul>
-        </nav>
-    </header>
+    <header><nav><ul>
+        <li><a href="index.html">About</a></li>
+        <li><a href="work-experience.html">Experience</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="assignments.html" class="active">Assignments</a></li>
+    </ul></nav></header>
 
     <div class="container">
-        <h1>📚 Academic Portolio</h1>
-
-        <div class="course-section">
-            <h2>🖥️ CS506: Data Science Tools and Applications</h2>
-            <div class="course-description">
-                <p>Advanced coursework at Boston University covering the end-to-end data science lifecycle, from Pythonic data engineering to the deployment of neural networks and latent semantic analysis.</p>
+        <h1>📚 Academic Portfolio</h1>
+        <h2>🖥️ CS506: Data Science Tools & Applications</h2>
+        
+        <div class="assignment-grid">
+            <div class="assignment-card">
+                <h3>Elevator Optimization</h3>
+                <p>Optimal standing location analysis for the BU CDS building elevators.</p>
+                <div class="links"><a href="https://github.com/AkshatSharma03/akshat14-assignment1" target="_blank">GitHub</a></div>
             </div>
-
-            <div class="assignment-grid">
-                <!-- Assignment 0 -->
-                <div class="assignment-card">
-                    <h3>Assignment 0: Python Basics</h3>
-                    <p>Foundation in Python scripting, numerical operations, and output formatting.</p>
-                    <div class="links">
-                        <a href="https://github.com/AkshatSharma03/akshat14-assignment-0.git" target="_blank">GitHub Repo</a>
-                    </div>
-                </div>
-
-                <!-- Assignment 1 -->
-                <div class="assignment-card">
-                    <h3>Assignment 1: Elevator Optimization</h3>
-                    <p>Mathematical optimization to find the ideal location in the BU CDS building for elevator efficiency.</p>
-                    <div class="links">
-                        <a href="https://github.com/AkshatSharma03/akshat14-assignment1/tree/main" target="_blank">GitHub Repo</a>
-                    </div>
-                </div>
-
-                <!-- Assignment 2 -->
-                <div class="assignment-card">
-                    <h3>Assignment 2: KMeans Visualization</h3>
-                    <p>Interactive web app demonstrating KMeans clustering and initialization strategy impacts.</p>
-                    <div class="links">
-                        <a href="https://github.com/AkshatSharma03/akshat14-assignment-2/tree/main" target="_blank">GitHub</a>
-                        <a href="https://youtu.be/Uve7_Xx8nSc" target="_blank">Video Demo</a>
-                    </div>
-                </div>
-
-                <!-- Assignment 4 -->
-                <div class="assignment-card">
-                    <h3>Assignment 4: LSA (Text Mining)</h3>
-                    <p>Exploring text mining and latent space using Latent Semantic Analysis.</p>
-                    <div class="links">
-                        <a href="https://github.com/AkshatSharma03/akshat14-assignment-4" target="_blank">GitHub</a>
-                        <a href="https://youtu.be/lqP0bASzrus" target="_blank">Video Demo</a>
-                    </div>
-                </div>
-
-                <!-- Assignment 5 -->
-                <div class="assignment-card">
-                    <h3>Assignment 5: Churn Prediction</h3>
-                    <p>Predicting customer churn using K-Nearest Neighbors (KNN) algorithms.</p>
-                    <div class="links">
-                        <a href="https://github.com/AkshatSharma03/akshat14-assignment-5/tree/main" target="_blank">GitHub Repo</a>
-                    </div>
-                </div>
-
-                <!-- Midterm -->
-                <div class="assignment-card">
-                    <h3>Midterm Project</h3>
-                    <p>Comprehensive integration of data science concepts in a full-scale analysis project.</p>
-                    <div class="links">
-                        <a href="https://github.com/AkshatSharma03/akshat14-midterm" target="_blank">Full Project</a>
-                    </div>
+            <div class="assignment-card">
+                <h3>KMeans Visualization</h3>
+                <p>Interactive web app for KMeans clustering and initialization strategy impacts.</p>
+                <div class="links">
+                    <a href="https://github.com/AkshatSharma03/akshat14-assignment-2" target="_blank">GitHub</a>
+                    <a href="https://youtu.be/Uve7_Xx8nSc" target="_blank">Demo</a>
                 </div>
             </div>
+            <div class="assignment-card">
+                <h3>SVD from Scratch</h3>
+                <p>Custom implementation of the Singular Value Decomposition algorithm.</p>
+                <div class="links"><a href="https://github.com/AkshatSharma03/akshat14-assignment-3" target="_blank">GitHub</a></div>
+            </div>
+            <div class="assignment-card">
+                <h3>LSA Text Mining</h3>
+                <p>Explored text mining using Latent Semantic Analysis and vector spaces.</p>
+                <div class="links">
+                    <a href="https://github.com/AkshatSharma03/akshat14-assignment-4" target="_blank">GitHub</a>
+                    <a href="https://youtu.be/lqP0bASzrus" target="_blank">Demo</a>
+                </div>
+            </div>
+            <div class="assignment-card">
+                <h3>Churn Prediction (KNN)</h3>
+                <p>Modeled customer churn probability using K-Nearest Neighbors.</p>
+                <div class="links"><a href="https://github.com/AkshatSharma03/akshat14-assignment-5" target="_blank">GitHub</a></div>
+            </div>
+            <div class="assignment-card">
+                <h3>Midterm Project</h3>
+                <p>Full-scale data science project integrating course-wide toolsets.</p>
+                <div class="links"><a href="https://github.com/AkshatSharma03/akshat14-midterm" target="_blank">GitHub</a></div>
+            </div>
+        </div>
 
-            <h2>🚀 Advanced Models & Neural Nets</h2>
-            <ul class="advanced-list">
-                <li><a href="https://github.com/AkshatSharma03/akshat14-assignment-7" target="_blank">Assignment 7: Advanced Analysis</a></li>
-                <li><a href="https://github.com/AkshatSharma03/akshat14-assignment-8" target="_blank">Assignment 8: Logistic Regression</a></li>
-                <li><a href="https://github.com/AkshatSharma03/akshat14-assignment-9" target="_blank">Assignment 9: Neural Networks</a></li>
-                <li><a href="https://github.com/AkshatSharma03/akshat14-assignment-10" target="_blank">Assignment 10: Google Image Search</a></li>
-                <li><a href="https://github.com/AkshatSharma03/akshat14-extracredit" target="_blank">Extra Credit: Neural Optimization</a></li>
-            </ul>
+        <h2>🚀 Advanced Topics</h2>
+        <div class="assignment-grid">
+            <div class="assignment-card">
+                <h3>Logistic Regression & Neural Nets</h3>
+                <p>Deep dive into linear models and neural network optimization.</p>
+                <div class="links">
+                    <a href="https://github.com/AkshatSharma03/akshat14-assignment-8" target="_blank">A8</a>
+                    <a href="https://github.com/AkshatSharma03/akshat14-assignment-9" target="_blank">A9</a>
+                </div>
+            </div>
+            <div class="assignment-card">
+                <h3>Google Image Search & Extra Credit</h3>
+                <p>Image retrieval systems and extra credit neural optimization work.</p>
+                <div class="links">
+                    <a href="https://github.com/AkshatSharma03/akshat14-assignment-10" target="_blank">A10</a>
+                    <a href="https://github.com/AkshatSharma03/akshat14-extracredit" target="_blank">EC</a>
+                </div>
+            </div>
         </div>
     </div>
-
-    <footer>
-        <p>&copy; 2026 Akshat Sharma. All rights reserved.</p>
-    </footer>
-
+    <footer><p>&copy; 2026 Akshat Sharma</p></footer>
 </body>
 </html>
