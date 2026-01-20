@@ -5,226 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Akshat Sharma | AI Systems & Cloud Engineer</title>
     <style>
-        /* Modern Global Styles */
-        :root {
-            --primary: #2c3e50;
-            --accent: #1e90ff;
-            --bg: #f8f9fa;
-            --text: #333;
-            --light-text: #666;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background-color: var(--bg);
-            margin: 0;
-            padding: 0;
-            color: var(--text);
-            line-height: 1.6;
-        }
-
-        header {
-            background-color: var(--primary);
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            margin: 0;
-            padding: 0;
-        }
-
+        :root { --primary: #2c3e50; --accent: #1e90ff; --bg: #f8f9fa; --text: #333; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); margin: 0; }
+        header { background: var(--primary); padding: 1rem 0; position: sticky; top: 0; z-index: 1000; }
+        nav ul { list-style: none; display: flex; justify-content: center; padding: 0; }
         nav ul li { margin: 0 15px; }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #ecf0f1;
-            font-weight: 500;
-            padding: 8px 12px;
-            border-radius: 4px;
-            transition: 0.3s;
-        }
-
-        nav ul li a:hover, nav ul li a.active {
-            color: white;
-            background-color: var(--accent);
-        }
-
-        /* Hero Section */
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            background-color: #fff;
-            padding: 50px;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-        }
-
-        .hero h1 {
-            font-size: 2.8em;
-            margin: 0;
-            color: var(--primary);
-        }
-
-        .hero p {
-            font-size: 1.25em;
-            color: var(--light-text);
-            margin-top: 10px;
-        }
-
-        .tagline {
-            display: inline-block;
-            background: #e1f0ff;
-            color: var(--accent);
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.9em;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-
-        h2 {
-            font-size: 1.8em;
-            border-left: 4px solid var(--accent);
-            padding-left: 15px;
-            margin-top: 40px;
-            color: var(--primary);
-        }
-
-        /* Grid for Skills */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        .section { padding-bottom: 20px; }
-
-        .project-item {
-            margin-bottom: 25px;
-        }
-
-        .project-title {
-            font-weight: bold;
-            font-size: 1.1em;
-            color: var(--accent);
-            display: block;
-        }
-
-        a { color: var(--accent); text-decoration: none; transition: 0.2s; }
-        a:hover { color: var(--primary); text-decoration: underline; }
-
-        footer {
-            text-align: center;
-            padding: 30px;
-            background-color: var(--primary);
-            color: #ecf0f1;
-            margin-top: 60px;
-        }
-
-        @media (max-width: 768px) {
-            .container { padding: 25px; margin: 20px; }
-            .skills-grid { grid-template-columns: 1fr; }
-        }
+        nav ul li a { color: #ecf0f1; text-decoration: none; font-weight: 500; padding: 8px 12px; border-radius: 4px; transition: 0.3s; }
+        nav ul li a:hover, nav ul li a.active { background: var(--accent); }
+        .container { max-width: 900px; margin: 40px auto; background: #fff; padding: 50px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .hero h1 { font-size: 2.8em; color: var(--primary); margin: 0; }
+        .tagline { display: inline-block; background: #e1f0ff; color: var(--accent); padding: 4px 12px; border-radius: 20px; font-weight: bold; margin-bottom: 20px; }
+        h2 { border-left: 4px solid var(--accent); padding-left: 15px; color: var(--primary); margin-top: 40px; }
+        .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        footer { text-align: center; padding: 30px; background: var(--primary); color: #ecf0f1; margin-top: 60px; }
     </style>
 </head>
 <body>
-
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html" class="active">About Me</a></li>
-                <li><a href="work-experience.html">Work Experience</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="assignments.html">Assignments</a></li>
-            </ul>
-        </nav>
-    </header>
-
+    <header><nav><ul>
+        <li><a href="index.html" class="active">About Me</a></li>
+        <li><a href="work-experience.html">Work Experience</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul></nav></header>
     <div class="container">
         <div class="hero">
-            <span class="tagline">Computer Science & Economics @ BU</span>
+            <span class="tagline">International AI Advisory | CS & Econ @ BU</span>
             <h1>👋 I'm Akshat Sharma</h1>
-            <p><strong>AI Systems & Cloud Engineer</strong> dedicated to building production-grade, ethically-grounded, and economically scalable solutions.</p>
+            <p><strong>AI Systems & Cloud Engineer</strong> specializing in production-grade RAG pipelines and government-level AI strategy.</p>
         </div>
-
         <div class="section">
             <h2>🚀 The Full Picture</h2>
-            <p>I architect the intersection of <strong>Generative AI</strong> and <strong>Cloud Infrastructure</strong>. My dual background in Computer Science and Economics allows me to solve complex technical problems while keeping an eye on system efficiency and societal impact. Currently, I serve as an <strong>AI Affiliate</strong> at Boston University, shaping the future of AI-resilient education.</p>
+            <p>I build AI systems that are technically sophisticated and economically scalable. My unique experience as an <strong>International Speaker for Government initiatives</strong> and an <strong>AI Affiliate at Boston University</strong> allows me to navigate both the engineering and governance of AI.</p>
         </div>
-
         <div class="section">
             <h2>🛠️ Technical Ecosystem</h2>
             <div class="skills-grid">
-                <div>
-                    <strong>Core Engineering</strong>
-                    <ul>
-                        <li>LLM Orchestration (LangChain, LlamaIndex)</li>
-                        <li>RAG Pipeline Development (FAISS)</li>
-                        <li>Python, Node.js, PostgreSQL</li>
-                    </ul>
-                </div>
-                <div>
-                    <strong>Cloud & Infrastructure</strong>
-                    <ul>
-                        <li>Azure Cloud Practitioner</li>
-                        <li>AWS (EC2, S3, Lambda)</li>
-                        <li>Docker & Kubernetes</li>
-                    </ul>
-                </div>
+                <div><strong>Engineering</strong><ul><li>RAG Pipelines (FAISS)</li><li>Python, Node.js, Java</li><li>LangChain & LLMOps</li></ul></div>
+                <div><strong>Cloud</strong><ul><li>Azure Cloud Practitioner</li><li>AWS (S3, Lambda, IAM)</li><li>Docker & Kubernetes</li></ul></div>
             </div>
         </div>
-
         <div class="section">
-            <h2>🔬 Featured Work</h2>
-            <div class="project-item">
-                <span class="project-title">Terrier GPT (Enterprise RAG)</span>
-                <p>Engineered a high-volume AI assistant for Boston University, vectorizing 5,000+ documents to streamline institutional knowledge retrieval.</p>
-            </div>
-            <div class="project-item">
-                <span class="project-title">GoNiva — Co-Founder</span>
-                <p>Architected an AI-driven travel planning platform accepted into the <a href="https://www.bu.edu/innovate/profile/akshat-sharma/" target="_blank">BU Innovation Pathway</a>.</p>
-            </div>
-            <div class="project-item">
-                <span class="project-title">Medical Imaging (Batman Lab)</span>
-                <p>Enhanced breast cancer detection models (Mammo-CLIP) with a focus on bias detection and clinical accuracy.</p>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>🎤 Leadership</h2>
-            <ul>
-                <li><strong>International Guest Speaker:</strong> Delivered seminars on the "Modern AI Ecosystem" for <a href="https://www.instagram.com/p/DTXGPr1DChq/" target="_blank">Assyl AI</a>.</li>
-                <li><strong>AI Governance:</strong> Mentoring undergraduates on iterative prompting and ethical LLM usage.</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>📫 Connect With Me</h2>
-            <p>Always open to discussing AI Agents, Cloud Scalability, or Econometrics.</p>
+            <h2>📫 Connect</h2>
             <ul>
                 <li>Email: <a href="mailto:akshat1.sunil@gmail.com">akshat1.sunil@gmail.com</a></li>
-                <li>LinkedIn: <a href="https://www.linkedin.com/in/sharma-akshat03/" target="_blank">linkedin.com/in/sharma-akshat03</a></li>
-                <li>GitHub: <a href="https://github.com/AkshatSharma03" target="_blank">github.com/AkshatSharma03</a></li>
+                <li>LinkedIn: <a href="https://linkedin.com/in/sharma-akshat03">sharma-akshat03</a></li>
             </ul>
         </div>
-
-        <div class="section">
-            <h2>⚡ Fun Fact</h2>
-            <p>I’m a big fan of problem-solving in all forms—whether it's optimizing a cloud-native backend or navigating the economic complexities of global AI adoption!</p>
-        </div>
     </div>
-
-    <footer>
-        <p>&copy; 2026 Akshat Sharma. All rights reserved.</p>
-    </footer>
-
+    <footer><p>&copy; 2026 Akshat Sharma</p></footer>
 </body>
 </html>
