@@ -5,27 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects | Akshat Sharma</title>
     <style>
-        /* [USE SHARED MASTER CSS] */
+        /* MASTER SHARED CSS */
         :root { --primary: #2c3e50; --accent: #1e90ff; --bg: #f5f5f5; --card-bg: #ffffff; --text: #333; --nav-text: #ecf0f1; }
-        body { font-family: 'Segoe UI', sans-serif; background: var(--bg); margin: 0; }
-        header { background: var(--primary); padding: 15px 0; position: sticky; top: 0; }
-        nav ul { list-style: none; display: flex; justify-content: center; flex-wrap: wrap; padding: 0; }
-        nav ul li a { color: #ecf0f1; text-decoration: none; padding: 8px 12px; font-size: 0.9em; }
-        nav ul li a.active { background: var(--accent); border-radius: 5px; }
-        .container { width: 95%; max-width: 950px; margin: 30px auto; }
+        * { box-sizing: border-box; }
+        body { font-family: 'Segoe UI', sans-serif; background: var(--bg); margin: 0; color: var(--text); line-height: 1.6; }
+        
+        /* HEADER */
+        header { background-color: var(--primary); padding: 15px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.2); }
+        nav ul { list-style: none; display: flex; justify-content: center; flex-wrap: wrap; margin: 0; padding: 0; }
+        nav ul li { margin: 5px 10px; }
+        nav ul li a { text-decoration: none; color: var(--nav-text); font-size: 0.95em; font-weight: 500; padding: 8px 12px; border-radius: 5px; transition: 0.3s; }
+        nav ul li a:hover, nav ul li a.active { background: var(--accent); color: white; }
+
+        /* CONTAINER */
+        .container { width: 95%; max-width: 950px; margin: 40px auto; padding: 0 20px; }
+        h1 { color: var(--primary); font-size: 2.2em; text-align: center; margin-bottom: 40px; }
         
         .project-card {
-            background: #fff; border-radius: 12px; padding: 25px; margin-bottom: 20px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-left: 6px solid var(--accent);
+            background: white; border-radius: 12px; padding: 30px; margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-left: 6px solid var(--accent);
         }
-        .project-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
-        .project-header h3 { margin: 0; font-size: 1.2em; color: var(--primary); }
-        .badge { background: #e1f0ff; color: var(--accent); padding: 4px 10px; border-radius: 20px; font-size: 0.75em; font-weight: bold; }
+        .project-header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; }
+        .project-header h3 { margin: 0; color: var(--primary); font-size: 1.5rem; }
+        .badge { background: #e1f0ff; color: var(--accent); padding: 5px 12px; border-radius: 20px; font-size: 0.85em; font-weight: bold; }
         
+        .tech-tags { margin: 15px 0; display: flex; flex-wrap: wrap; gap: 8px; }
+        .tag { background: #eee; color: #555; padding: 3px 10px; border-radius: 4px; font-size: 0.85em; font-family: monospace; }
+        .project-link { display: inline-block; margin-top: 10px; color: var(--accent); text-decoration: none; font-weight: bold; }
+        .project-link:hover { text-decoration: underline; }
+
         @media (max-width: 600px) {
             .project-header h3 { width: 100%; margin-bottom: 5px; }
             .project-card { padding: 20px; }
         }
+
+        footer { text-align: center; padding: 20px; background: var(--primary); color: #ecf0f1; margin-top: 50px; }
     </style>
 </head>
 <body>
@@ -39,14 +53,59 @@
 
     <div class="container">
         <h1>🚀 Featured Projects</h1>
+
+        <!-- Project 1 -->
         <div class="project-card">
             <div class="project-header">
-                <h3>🏛️ Kazakhstan Govt AI Seminar</h3>
-                <span class="badge">Advisory</span>
+                <h3>🏛️ Kazakhstan Government AI Seminar</h3>
+                <span class="badge">International Advisory</span>
             </div>
-            <p style="font-size: 0.9em;">Invited international speaker advising on state-level AI strategy and cloud integration.</p>
+            <p>Invited to advise government stakeholders on <strong>AI Ecosystems</strong>, GenAI-powered public services, and the economic impact of cloud-native AI integration.</p>
+            <a href="https://www.instagram.com/p/DTXGPr1DChq/" target="_blank" class="project-link">View Official Verification →</a>
         </div>
-        <!-- [REPLICATE FOR GONIVA, TERRIER GPT, ETC.] -->
+
+        <!-- Project 2 -->
+        <div class="project-card">
+            <div class="project-header">
+                <h3>🌍 GoNiva: AI Travel Discovery</h3>
+                <span class="badge">Startup / Innovate@BU</span>
+            </div>
+            <div class="tech-tags"><span class="tag">Next.js</span><span class="tag">PostgreSQL</span><span class="tag">OpenAI API</span></div>
+            <p>Architected a full-stack travel planning platform accepted into the BU Innovation Pathway. Uses LLMs to generate dynamic, personalized itineraries based on user preferences.</p>
+            <a href="https://www.bu.edu/innovate/profile/goniva/" target="_blank" class="project-link">View Innovation Profile →</a>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+            <div class="project-header">
+                <h3>🐶 Terrier GPT: Institutional RAG</h3>
+                <span class="badge">Enterprise Systems</span>
+            </div>
+            <div class="tech-tags"><span class="tag">Python</span><span class="tag">FAISS</span><span class="tag">GPT-4</span></div>
+            <p>Built a knowledge retrieval engine for Boston University, vectorizing 5,000+ docs to automate support tickets. Handled 10,000+ interactions during pilot.</p>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card">
+            <div class="project-header">
+                <h3>🏥 Medical Imaging: Mammo-CLIP</h3>
+                <span class="badge">Research / ML</span>
+            </div>
+            <div class="tech-tags"><span class="tag">PyTorch</span><span class="tag">CLIP</span><span class="tag">Scikit-learn</span></div>
+            <p>Fine-tuned multimodal models for breast cancer detection and implemented <strong>bias-detection frameworks</strong> to enhance clinical accuracy.</p>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card">
+            <div class="project-header">
+                <h3>💬 Pravaha: AI Employee Engagement</h3>
+                <span class="badge">Automation</span>
+            </div>
+            <div class="tech-tags"><span class="tag">FastAPI</span><span class="tag">LlamaIndex</span><span class="tag">Redis</span></div>
+            <p>Developed a conversational Slack bot using LlamaIndex for context-aware feedback and persistent state management with Redis.</p>
+        </div>
     </div>
+
+    <footer><p>&copy; 2026 Akshat Sharma. All rights reserved.</p></footer>
 </body>
 </html>
