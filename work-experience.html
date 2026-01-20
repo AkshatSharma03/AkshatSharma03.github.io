@@ -2,242 +2,63 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Work Experience | Akshat Sharma</title>
     <style>
-        :root {
-            --primary: #2c3e50;
-            --accent: #1e90ff;
-            --bg: #f8f9fa;
-            --text: #333;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background-color: var(--bg);
-            margin: 0;
-            padding: 0;
-            color: var(--text);
-            line-height: 1.6;
-        }
-
-        header {
-            background-color: var(--primary);
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            margin: 0;
-            padding: 0;
-        }
-
+        :root { --primary: #2c3e50; --accent: #1e90ff; --bg: #f8f9fa; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); margin: 0; }
+        header { background: var(--primary); padding: 1rem 0; }
+        nav ul { list-style: none; display: flex; justify-content: center; padding: 0; }
         nav ul li { margin: 0 15px; }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #ecf0f1;
-            font-weight: 500;
-            padding: 8px 12px;
-            border-radius: 4px;
-            transition: 0.3s;
-        }
-
-        nav ul li a:hover, nav ul li a.active {
-            background-color: var(--accent);
-            color: white;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 50px auto;
-            background-color: #fff;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-        }
-
-        h1 {
-            color: var(--primary);
-            font-size: 2.5rem;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
-        /* Collapsible Styling */
-        .collapsible {
-            background-color: #fff;
-            color: var(--primary);
-            cursor: pointer;
-            padding: 20px;
-            width: 100%;
-            border: 1px solid #eee;
-            text-align: left;
-            outline: none;
-            font-size: 1.2em;
-            font-weight: 600;
-            border-radius: 8px;
-            margin-top: 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: 0.2s;
-        }
-
-        .collapsible:hover {
-            border-color: var(--accent);
-            background-color: #f0f7ff;
-        }
-
-        .collapsible:after {
-            content: '\002B';
-            color: var(--accent);
-            font-weight: bold;
-            font-size: 1.5em;
-        }
-
-        .active:after {
-            content: "\2212";
-        }
-
-        .active {
-            border-bottom-left-radius: 0;
-            border-bottom-right-radius: 0;
-            background-color: #f0f7ff;
-        }
-
-        .content {
-            padding: 0 25px;
-            display: none;
-            overflow: hidden;
-            background-color: #fff;
-            border: 1px solid #eee;
-            border-top: none;
-            border-bottom-left-radius: 8px;
-            border-bottom-right-radius: 8px;
-        }
-
-        .content p.meta {
-            color: var(--accent);
-            font-weight: 500;
-            margin-top: 15px;
-            font-size: 0.95em;
-        }
-
-        .content ul {
-            padding-bottom: 20px;
-        }
-
-        .content li {
-            margin-bottom: 10px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 30px;
-            background-color: var(--primary);
-            color: #ecf0f1;
-            margin-top: 60px;
-        }
+        nav ul li a { color: #ecf0f1; text-decoration: none; padding: 8px 12px; border-radius: 4px; }
+        nav ul li a.active { background: var(--accent); }
+        .container { max-width: 900px; margin: 50px auto; background: #fff; padding: 40px; border-radius: 12px; }
+        .collapsible { background: #fff; color: var(--primary); cursor: pointer; padding: 20px; width: 100%; border: 1px solid #eee; text-align: left; font-size: 1.2em; font-weight: 600; border-radius: 8px; margin-top: 15px; display: flex; justify-content: space-between; align-items: center; transition: 0.2s; }
+        .collapsible:hover { background: #f0f7ff; border-color: var(--accent); }
+        .content { padding: 0 25px; display: none; background: #fff; border: 1px solid #eee; border-top: none; }
+        .meta { color: var(--accent); font-weight: 500; margin-top: 15px; }
+        footer { text-align: center; padding: 30px; background: var(--primary); color: #ecf0f1; margin-top: 60px; }
     </style>
 </head>
-
 <body>
-
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">About Me</a></li>
-                <li><a href="work-experience.html" class="active">Work Experience</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="assignments.html">Assignments</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main class="container">
+    <header><nav><ul>
+        <li><a href="index.html">About Me</a></li>
+        <li><a href="work-experience.html" class="active">Work Experience</a></li>
+        <li><a href="projects.html">Projects</a></li>
+    </ul></nav></header>
+    <div class="container">
         <h1>💼 Work Experience</h1>
-
-        <!-- AI Affiliate -->
         <button class="collapsible">🤖 AI Affiliate (Governance) @ Boston University</button>
         <div class="content">
             <p class="meta">Jan 2026 – Present | Boston, MA</p>
             <ul>
-                <li>Collaborating with faculty to transition curricula to <strong>"AI-resilient"</strong> frameworks by integrating human-in-the-loop workflows.</li>
-                <li>Mentoring undergraduates on <strong>ethical LLM application</strong>, focusing on iterative prompting, bias detection, and academic integrity.</li>
-                <li>Conducting research on AI usage patterns to inform long-term University pedagogy and ethical frameworks.</li>
+                <li>Collaborating with faculty to transition curricula to "AI-resilient" frameworks.</li>
+                <li>Mentoring undergraduates on ethical LLM application and bias detection.</li>
             </ul>
         </div>
-
-        <!-- IT Help Center / Terrier GPT -->
         <button class="collapsible">🚀 AI Developer (Terrier GPT) @ BU IT Help Center</button>
         <div class="content">
             <p class="meta">Aug 2022 – Sept 2025 | Boston, MA</p>
             <ul>
-                <li>Engineered a production-grade <strong>RAG pipeline</strong> to vectorize and index 5,000+ university documents into a FAISS database for an internal AI assistant.</li>
-                <li>Developed scalable backend logic to support <strong>10,000+ user interactions</strong>, leveraging insights from support tickets to define product requirements.</li>
-                <li>Managed technical troubleshooting across hardware and cloud networks while transitioning core duties toward AI development.</li>
+                <li>Engineered a production-grade RAG pipeline indexing 5,000+ docs into FAISS.</li>
+                <li>Supported 10,000+ user interactions via scalable backend logic.</li>
             </ul>
         </div>
-
-        <!-- Batman Lab -->
         <button class="collapsible">🔬 Research Assistant @ Batman Lab, Boston University</button>
         <div class="content">
             <p class="meta">Jan 2024 – July 2024 | Boston, MA</p>
             <ul>
-                <li>Built machine learning models (PyTorch, Scikit-learn) for medical prediction systems, improving diagnostic accuracy by <strong>12%</strong>.</li>
-                <li>Applied <strong>bias-detection methods</strong> to state-of-the-art breast cancer risk models (Mirai) to enhance clinical accuracy.</li>
-                <li>Labeled 40,000+ image datasets using OpenAI’s CLIP model for zero-shot classification and benchmarking.</li>
+                <li>Improved medical ML model accuracy by 12% via PyTorch and Scikit-learn.</li>
+                <li>Applied bias-detection methods to enhance risk model clinical equity.</li>
             </ul>
         </div>
-
-        <!-- Beyond Square -->
-        <button class="collapsible">📊 Market Research & UX Intern @ Beyond Square Solutions</button>
-        <div class="content">
-            <p class="meta">June 2024 – Aug 2024 | Pune, India / Remote</p>
-            <ul>
-                <li>Synthesized feedback from 15+ potential client interviews into actionable <strong>product requirements</strong> for U.S. localization.</li>
-                <li>Refined technical onboarding resources and created <strong>concise API documentation</strong>, decreasing developer support tickets by 25%.</li>
-                <li>Influenced UI redesigns that improved task completion rates in mock-ups by 25%.</li>
-            </ul>
-        </div>
-
-        <!-- Peer Counselor -->
-        <button class="collapsible">🤝 Peer Counselor @ Orientation, Boston University</button>
-        <div class="content">
-            <p class="meta">May 2023 – Jan 2024 | Boston, MA</p>
-            <ul>
-                <li>Led orientation groups of up to <strong>60 students</strong> as a university ambassador, facilitating successful student transitions.</li>
-                <li>Coordinated large-scale events and provided peer-level mentorship on academic and social integration.</li>
-            </ul>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Akshat Sharma. All rights reserved.</p>
-    </footer>
-
+    </div>
     <script>
-        const collapsibles = document.querySelectorAll(".collapsible");
-        collapsibles.forEach(button => {
-            button.addEventListener("click", function () {
-                this.classList.toggle("active");
-                const content = this.nextElementSibling;
-                if (content.style.display === "block") {
-                    content.style.display = "none";
-                } else {
-                    content.style.display = "block";
-                }
-            });
-        });
+        const colls = document.querySelectorAll(".collapsible");
+        colls.forEach(c => c.addEventListener("click", function() {
+            this.classList.toggle("active");
+            const content = this.nextElementSibling;
+            content.style.display = content.style.display === "block" ? "none" : "block";
+        }));
     </script>
-
 </body>
 </html>
