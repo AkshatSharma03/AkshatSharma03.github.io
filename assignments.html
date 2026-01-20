@@ -26,6 +26,10 @@
 
         /* ASSIGNMENT GRID */
         .assignment-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
+        
+        /* FULL WIDTH FOR MIDTERM TO STAND OUT */
+        .full-width { grid-column: 1 / -1; background-color: #fcfcfc; border-left: 5px solid var(--primary); }
+
         .assignment-card { background: #fff; border: 1px solid #eee; padding: 20px; border-radius: 8px; transition: 0.3s; }
         .assignment-card:hover { border-color: var(--accent); transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
         .assignment-card h3 { margin: 0 0 10px 0; font-size: 1.1em; color: var(--primary); }
@@ -34,13 +38,6 @@
         .links { display: flex; gap: 15px; font-weight: bold; font-size: 0.85em; }
         .links a { color: var(--accent); text-decoration: none; }
         .links a:hover { text-decoration: underline; }
-
-        /* LIST VIEW FOR ADVANCED */
-        .advanced-list { list-style: none; padding: 0; }
-        .advanced-list li { margin-bottom: 15px; background: #fff; border: 1px solid #eee; padding: 15px; border-radius: 8px; transition: 0.2s; }
-        .advanced-list li:hover { border-color: var(--accent); }
-        .advanced-list h3 { margin: 0 0 5px 0; font-size: 1.1em; color: var(--primary); }
-        .advanced-list a { color: var(--accent); text-decoration: none; font-weight: bold; font-size: 0.9em; }
 
         @media (max-width: 768px) {
             .assignment-grid { grid-template-columns: 1fr; }
@@ -78,7 +75,7 @@
             <!-- Assignment 1 -->
             <div class="assignment-card">
                 <h3>Assignment 1: Elevator Optimization</h3>
-                <p>Finds the optimal location to stand in the CDS building at BU while waiting for one of the 6 elevators using probability.</p>
+                <p>Finds the optimal location to stand in the CDS building at BU while waiting for one of the 6 elevators.</p>
                 <div class="links"><a href="https://github.com/AkshatSharma03/akshat14-assignment1/tree/main" target="_blank">GitHub Link</a></div>
             </div>
 
@@ -116,42 +113,51 @@
                 <div class="links"><a href="https://github.com/AkshatSharma03/akshat14-assignment-5/tree/main" target="_blank">GitHub Link</a></div>
             </div>
 
-             <!-- Midterm -->
-             <div class="assignment-card">
+            <!-- Midterm Project -->
+            <div class="assignment-card full-width">
                 <h3>Midterm Project</h3>
-                <p>Comprehensive project integrating multiple data science tools to analyze a large dataset.</p>
+                <p>Comprehensive project integrating multiple data science tools to analyze a large dataset using the full CS506 stack.</p>
                 <div class="links"><a href="https://github.com/AkshatSharma03/akshat14-midterm" target="_blank">GitHub Link</a></div>
             </div>
         </div>
 
         <h2>🚀 Advanced Models & Neural Networks</h2>
-        <ul class="assignment-grid"> <!-- Using grid layout for consistency -->
-            <li class="assignment-card">
+        <div class="assignment-grid">
+            <!-- Assignment 7 -->
+            <div class="assignment-card">
                 <h3>Assignment 7: Advanced Analysis</h3>
-                <p>Deep dive into statistical analysis and feature engineering.</p>
+                <p>Deep dive into statistical analysis and feature engineering techniques.</p>
                 <div class="links"><a href="https://github.com/AkshatSharma03/akshat14-assignment-7" target="_blank">GitHub Link</a></div>
-            </li>
-            <li class="assignment-card">
+            </div>
+
+            <!-- Assignment 8 -->
+            <div class="assignment-card">
                 <h3>Assignment 8: Logistic Regression</h3>
                 <p>Implementation and optimization of Logistic Regression models.</p>
                 <div class="links"><a href="https://github.com/AkshatSharma03/akshat14-assignment-8" target="_blank">GitHub Link</a></div>
-            </li>
-            <li class="assignment-card">
+            </div>
+
+            <!-- Assignment 9 -->
+            <div class="assignment-card">
                 <h3>Assignment 9: Neural Networks</h3>
                 <p>Building and training Neural Networks for complex pattern recognition.</p>
                 <div class="links"><a href="https://github.com/AkshatSharma03/akshat14-assignment-9" target="_blank">GitHub Link</a></div>
-            </li>
-            <li class="assignment-card">
+            </div>
+
+            <!-- Assignment 10 -->
+            <div class="assignment-card">
                 <h3>Assignment 10: Google Image Search</h3>
                 <p>Developing an image retrieval system similar to Google Images.</p>
                 <div class="links"><a href="https://github.com/AkshatSharma03/akshat14-assignment-10" target="_blank">GitHub Link</a></div>
-            </li>
-            <li class="assignment-card">
+            </div>
+
+            <!-- Extra Credit -->
+            <div class="assignment-card full-width">
                 <h3>Extra Credit Project</h3>
                 <p>Additional research and implementation of advanced algorithms.</p>
                 <div class="links"><a href="https://github.com/AkshatSharma03/akshat14-extracredit" target="_blank">GitHub Link</a></div>
-            </li>
-        </ul>
+            </div>
+        </div>
     </div>
 
     <footer><p>&copy; 2026 Akshat Sharma. All rights reserved.</p></footer>
