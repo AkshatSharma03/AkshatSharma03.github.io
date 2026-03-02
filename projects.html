@@ -242,17 +242,28 @@
         <!-- Pravaha -->
         <div class="project-card">
             <div class="project-header">
-                <span class="project-title">💬 Pravaha: AI Employee Engagement</span>
-                <span class="badge">Automation</span>
+                <span class="project-title">💬 Pravaha — Agentic Slack AI Assistant</span>
+                <span class="badge">Agentic AI</span>
             </div>
             <div class="tech-tags">
-                <span class="tag">FastAPI</span>
-                <span class="tag">LlamaIndex</span>
+                <span class="tag">Python</span>
+                <span class="tag">Django</span>
+                <span class="tag">Celery</span>
                 <span class="tag">Redis</span>
+                <span class="tag">Claude API</span>
+                <span class="tag">RAG</span>
             </div>
             <ul class="project-bullets">
-                <li>Developed a <strong>conversational Slack bot</strong> using LlamaIndex for context-aware employee feedback and persistent state management with Redis.</li>
+                <li>Architected <strong>end-to-end agentic AI system embedded in Slack</strong> using Claude claude-sonnet-4-6 with native tool-use API; implemented autonomous reasoning loop (up to 10 iterations) enabling the agent to chain multiple tools per query without human intervention.</li>
+                <li>Built <strong>full RAG pipeline</strong>: embedded 221 document chunks with BAAI/bge-small-en-v1.5 (384-dim, CPU-only, zero-cost embeddings) and upserted directly to Upstash Vector; agent performs semantic retrieval at query time and Claude synthesises grounded answers.</li>
+                <li>Engineered <strong>7 callable tools</strong>: DuckDuckGo web search, sandboxed Python subprocess execution (15s timeout), RAG knowledge base, live weather, Slack channel history reader, URL content parser, and timezone-aware datetime.</li>
+                <li>Designed <strong>async task architecture with Celery + Redis</strong> so Django view returns HTTP 200 in under 100ms while worker processes the full agentic loop in background; per-thread conversation memory persisted in Django ORM keyed by <code style="background:#f1f5f9;padding:1px 5px;border-radius:4px;font-size:0.9em">thread_ts</code>/<code style="background:#f1f5f9;padding:1px 5px;border-radius:4px;font-size:0.9em">channel_id</code>.</li>
+                <li>Deployed <strong>two-service architecture on Railway</strong> (web + Celery worker); rich responses formatted as Slack Block Kit messages with per-tool attribution footer.</li>
             </ul>
+            <div class="project-links">
+                <a href="https://github.com/AkshatSharma03/Slack_ai_pravaha" target="_blank" class="project-link">GitHub Repo →</a>
+                <a href="https://youtu.be/n_Shq6aPSbI" target="_blank" class="project-link">YouTube Demo →</a>
+            </div>
         </div>
 
     </div>

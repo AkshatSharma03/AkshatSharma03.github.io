@@ -43,6 +43,15 @@
         .page-header h1 { font-size: 2em; font-weight: 800; letter-spacing: -0.02em; color: var(--text); }
         .page-header p { color: var(--muted); font-size: 0.97em; margin-top: 8px; }
 
+        /* SECTION LABEL */
+        .section-label {
+            font-size: 0.72em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;
+            color: var(--accent); margin-bottom: 16px; margin-top: 40px;
+            display: flex; align-items: center; gap: 10px;
+        }
+        .section-label:first-of-type { margin-top: 0; }
+        .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
         /* TIMELINE */
         .timeline { position: relative; padding-left: 28px; }
         .timeline::before {
@@ -134,37 +143,14 @@
     <div class="container">
         <div class="page-header">
             <h1>💼 Work Experience</h1>
-            <p>A timeline of roles across AI, research, and product.</p>
+            <p>A timeline of roles across software engineering, AI, and research.</p>
         </div>
 
+        <!-- ── MAIN EXPERIENCE ── -->
+        <div class="section-label">Main Experience</div>
         <div class="timeline">
 
-            <!-- AI Affiliate -->
-            <div class="timeline-item">
-                <button class="collapsible">
-                    <div class="collapsible-left">
-                        <div class="role-icon">🤖</div>
-                        <div class="role-info">
-                            <div class="role-title">AI Affiliate — Institutional Policy & Literacy</div>
-                            <div class="role-company">Boston University</div>
-                        </div>
-                    </div>
-                    <div class="chevron"></div>
-                </button>
-                <div class="content">
-                    <div class="content-inner">
-                        <span class="meta-tag">Jan 2026 – Present &nbsp;·&nbsp; Boston, MA</span>
-                        <ul>
-                            <li>Redesigned writing curricula with faculty to transition assignments from <strong>"AI-resistant" to "AI-resilient"</strong>, embedding critical human-in-the-loop workflows across 5 courses.</li>
-                            <li>Developed and implemented an <strong>AI boundary framework</strong> establishing transparent acceptable use policies (AUP) and ethical guidelines adopted by the writing department.</li>
-                            <li>Designed and delivered a <strong>10-module AI Literacy lecture series</strong> to 100+ non-technical students and faculty on hallucination detection, bias recognition, and risk-aware LLM usage.</li>
-                            <li>Conducted qualitative research on student AI-usage patterns, informing <strong>university-wide policy</strong> for generative AI adoption.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- GoNiva Co-Founder -->
+            <!-- GoNiva -->
             <div class="timeline-item">
                 <button class="collapsible">
                     <div class="collapsible-left">
@@ -180,16 +166,119 @@
                     <div class="content-inner">
                         <span class="meta-tag">Jan 2025 – Jun 2025 &nbsp;·&nbsp; Boston, MA</span>
                         <ul>
-                            <li>Architected and shipped <strong>production full-stack web application</strong> (Next.js frontend, Node.js/Express backend, PostgreSQL database, tRPC type-safe API layer) from concept to deployment on Railway.</li>
-                            <li>Designed <strong>component hierarchy and state management in React</strong>; implemented responsive UI with real-time updates and optimistic client-side caching.</li>
-                            <li>Built <strong>REST API endpoints in Node.js</strong> with proper error handling, request validation, and rate limiting; integrated OpenAI API for conversational features.</li>
-                            <li>Designed <strong>PostgreSQL schema for relational data modeling</strong>; implemented database migrations and query optimization for performance at scale.</li>
-                            <li>Deployed full application to production with <strong>CI/CD pipeline</strong>; monitored uptime and performance; integrated analytics and error tracking.</li>
+                            <li>Architected and shipped <strong>production full-stack web application</strong> (Next.js, Node.js/Express, PostgreSQL, tRPC) from concept to deployment on Railway; led technical architecture decisions across frontend, backend, and database layers.</li>
+                            <li>Designed <strong>component hierarchy and state management in React with Redux</strong>; implemented responsive UI with real-time updates, optimistic client-side caching, and form validation.</li>
+                            <li>Built <strong>type-safe REST API endpoints in Node.js with tRPC</strong>; implemented error handling, request validation, rate limiting, and JWT authentication; integrated OpenAI API for conversational features.</li>
+                            <li>Designed <strong>PostgreSQL schema with proper normalization</strong>; implemented database migrations, indexes, and query optimization for performance at scale.</li>
+                            <li>Deployed to production with <strong>CI/CD pipeline</strong>; integrated Sentry error tracking and analytics; monitored uptime and performance metrics.</li>
                             <li>Achieved <strong>10% acceptance rate</strong> into competitive BU Innovation Pathway program; recommended by investors for market readiness and technical execution.</li>
                         </ul>
                         <div class="content-links">
                             <a href="https://www.bu.edu/innovate/profile/goniva/" target="_blank" class="content-link">Innovation Profile →</a>
                             <a href="https://youtu.be/TrPc5A3VqNo" target="_blank" class="content-link">YouTube Demo →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Batman Lab -->
+            <div class="timeline-item">
+                <button class="collapsible">
+                    <div class="collapsible-left">
+                        <div class="role-icon">🔬</div>
+                        <div class="role-info">
+                            <div class="role-title">ML Research Assistant</div>
+                            <div class="role-company">Batman Lab, Boston University</div>
+                        </div>
+                    </div>
+                    <div class="chevron"></div>
+                </button>
+                <div class="content">
+                    <div class="content-inner">
+                        <span class="meta-tag">Jan 2024 – Jul 2024 &nbsp;·&nbsp; Boston, MA</span>
+                        <ul>
+                            <li>Built <strong>Python data pipeline processing 40,000+ medical images</strong> with OpenAI CLIP for zero-shot classification; validated annotation quality through statistical analysis and cross-validation.</li>
+                            <li>Developed <strong>algorithmic fairness evaluation framework</strong> for breast cancer risk model using scikit-learn; identified and quantified disparate impact across demographic groups through statistical testing.</li>
+                            <li>Trained <strong>medical image classification models</strong> (PyTorch, scikit-learn); improved diagnostic accuracy by 12% through feature engineering, data augmentation, and hyperparameter tuning.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Beyond Square Solutions -->
+            <div class="timeline-item">
+                <button class="collapsible">
+                    <div class="collapsible-left">
+                        <div class="role-icon">📊</div>
+                        <div class="role-info">
+                            <div class="role-title">UX Research Intern — Human-Computer Interaction</div>
+                            <div class="role-company">Beyond Square Solutions</div>
+                        </div>
+                    </div>
+                    <div class="chevron"></div>
+                </button>
+                <div class="content">
+                    <div class="content-inner">
+                        <span class="meta-tag">Jun 2024 – Aug 2024 &nbsp;·&nbsp; Pune, India / Remote</span>
+                        <ul>
+                            <li>Conducted <strong>empirical user research (N=15)</strong> with enterprise clients; synthesized insights into technical product requirements for U.S. market localization.</li>
+                            <li>Redesigned 3 core client-facing interfaces; improved <strong>task completion rates by 25%</strong> in usability testing while reducing cognitive load for non-technical users.</li>
+                            <li>Created <strong>technical API documentation and developer onboarding materials</strong>; reduced support tickets by 25%.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ── ADDITIONAL EXPERIENCE ── -->
+        <div class="section-label" style="margin-top: 40px;">Additional Experience</div>
+        <div class="timeline">
+
+            <!-- AI Affiliate -->
+            <div class="timeline-item">
+                <button class="collapsible">
+                    <div class="collapsible-left">
+                        <div class="role-icon">🤖</div>
+                        <div class="role-info">
+                            <div class="role-title">AI Affiliate — Policy & Curriculum Development</div>
+                            <div class="role-company">Boston University, College of Arts & Sciences</div>
+                        </div>
+                    </div>
+                    <div class="chevron"></div>
+                </button>
+                <div class="content">
+                    <div class="content-inner">
+                        <span class="meta-tag">Jan 2026 – Present &nbsp;·&nbsp; Boston, MA</span>
+                        <ul>
+                            <li>Redesigned writing curricula with faculty transitioning assignments to <strong>"AI-resilient" workflows</strong> across 5 courses; developed AI acceptable use policy (AUP) framework adopted by the writing department.</li>
+                            <li>Designed and delivered <strong>10-module AI Literacy lecture series</strong> to 100+ students and faculty on hallucination detection, bias recognition, and risk-aware LLM usage.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kazakhstan Guest Lecturer -->
+            <div class="timeline-item">
+                <button class="collapsible">
+                    <div class="collapsible-left">
+                        <div class="role-icon">🏛️</div>
+                        <div class="role-info">
+                            <div class="role-title">Guest Lecturer — Global AI Perspectives</div>
+                            <div class="role-company">Kazakhstan Government AI Seminar</div>
+                        </div>
+                    </div>
+                    <div class="chevron"></div>
+                </button>
+                <div class="content">
+                    <div class="content-inner">
+                        <span class="meta-tag">Jan 2026 &nbsp;·&nbsp; Remote</span>
+                        <ul>
+                            <li>Invited speaker presenting on <strong>global AI ecosystem dynamics</strong>, frontier model capabilities, and competitive landscape between U.S. and emerging markets to government-affiliated policy stakeholders.</li>
+                            <li>Delivered <strong>policy-oriented analysis</strong> on AI governance frameworks, compute controls, and liability mechanisms as tools for managing AI risks at scale.</li>
+                        </ul>
+                        <div class="content-links">
+                            <a href="https://www.instagram.com/p/DTXGPr1DChq/" target="_blank" class="content-link">Event Coverage →</a>
                         </div>
                     </div>
                 </div>
@@ -214,54 +303,6 @@
                             <li>Engineered a production-grade <strong>RAG pipeline</strong> to vectorize and index 5,000+ university documents into a FAISS database for an internal AI assistant.</li>
                             <li>Developed scalable backend logic to support <strong>10,000+ interactions</strong>, leveraging insights from resolved support tickets to define product requirements.</li>
                             <li>Transitioned from core support duties to AI development, bridging the gap between hardware troubleshooting and <strong>cloud-native AI</strong>.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Batman Lab -->
-            <div class="timeline-item">
-                <button class="collapsible">
-                    <div class="collapsible-left">
-                        <div class="role-icon">🔬</div>
-                        <div class="role-info">
-                            <div class="role-title">ML Research Assistant</div>
-                            <div class="role-company">Batman Lab, Boston University</div>
-                        </div>
-                    </div>
-                    <div class="chevron"></div>
-                </button>
-                <div class="content">
-                    <div class="content-inner">
-                        <span class="meta-tag">Jan 2024 – Jul 2024 &nbsp;·&nbsp; Boston, MA</span>
-                        <ul>
-                            <li>Designed an <strong>algorithmic fairness evaluation pipeline</strong> for a breast cancer risk model (Mirai) using Scikit-learn; identified disparate impact across demographic groups, improving clinical accuracy by 12%.</li>
-                            <li>Built and evaluated <strong>ML classification models</strong> (PyTorch, Scikit-learn) for medical image prediction through iterative feature engineering and model selection.</li>
-                            <li>Generated <strong>zero-shot labels for 40,000+ medical images</strong> using OpenAI's CLIP model; validated annotation quality through statistical analysis and cross-validation.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Beyond Square Solutions -->
-            <div class="timeline-item">
-                <button class="collapsible">
-                    <div class="collapsible-left">
-                        <div class="role-icon">📊</div>
-                        <div class="role-info">
-                            <div class="role-title">UX Research Intern — Human-Computer Interaction</div>
-                            <div class="role-company">Beyond Square Solutions</div>
-                        </div>
-                    </div>
-                    <div class="chevron"></div>
-                </button>
-                <div class="content">
-                    <div class="content-inner">
-                        <span class="meta-tag">Jun 2024 – Aug 2024 &nbsp;·&nbsp; Pune, India / Remote</span>
-                        <ul>
-                            <li>Conducted <strong>empirical user research (N=15)</strong> with enterprise clients; synthesized insights into technical product requirements for U.S. market localization.</li>
-                            <li>Redesigned 3 core client-facing interfaces; improved <strong>task completion rates by 25%</strong> in usability testing while reducing cognitive load for non-technical users.</li>
-                            <li>Created technical <strong>API documentation and onboarding materials</strong>; reduced developer support tickets by 25% through clearer integration guides.</li>
                         </ul>
                     </div>
                 </div>
