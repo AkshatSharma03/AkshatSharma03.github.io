@@ -4,42 +4,148 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Akshat Sharma | AI Systems & Cloud Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* MASTER SHARED CSS */
-        :root { --primary: #2c3e50; --accent: #1e90ff; --bg: #f5f5f5; --card-bg: #ffffff; --text: #333; --nav-text: #ecf0f1; }
-        * { box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: var(--bg); margin: 0; color: var(--text); line-height: 1.6; }
-        
-        /* HEADER */
-        header { background-color: var(--primary); padding: 15px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.2); }
-        nav ul { list-style: none; display: flex; justify-content: center; flex-wrap: wrap; margin: 0; padding: 0; }
-        nav ul li { margin: 5px 10px; }
-        nav ul li a { text-decoration: none; color: var(--nav-text); font-size: 0.95em; font-weight: 500; padding: 8px 12px; border-radius: 5px; transition: 0.3s; }
-        nav ul li a:hover, nav ul li a.active { background: var(--accent); color: white; }
+        :root {
+            --primary: #0f172a;
+            --accent: #6366f1;
+            --accent2: #8b5cf6;
+            --accent-light: #eef2ff;
+            --bg: #f8fafc;
+            --card: #ffffff;
+            --text: #1e293b;
+            --muted: #64748b;
+            --border: #e2e8f0;
+            --radius: 12px;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
 
-        /* CONTAINER */
-        .container { width: 95%; max-width: 950px; margin: 40px auto; background: var(--card-bg); padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-        
-        /* TYPOGRAPHY */
-        h1 { font-size: 2.2em; color: var(--primary); margin-bottom: 10px; }
-        h2 { font-size: 1.8em; color: var(--primary); border-bottom: 2px solid var(--accent); padding-bottom: 10px; margin-top: 40px; }
-        
-        .tagline { display: inline-block; background: #e1f0ff; color: var(--accent); padding: 5px 15px; border-radius: 50px; font-weight: bold; font-size: 0.9em; margin-bottom: 20px; }
-        
-        /* SKILLS GRID */
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 20px; }
-        .grid-item h3 { margin-top: 0; color: var(--accent); }
-        
-        .project-highlight { background: #f9f9f9; padding: 20px; border-left: 5px solid var(--accent); border-radius: 5px; margin-bottom: 20px; }
-        
-        /* MOBILE OPTIMIZATION */
-        @media (max-width: 768px) {
-            .grid { grid-template-columns: 1fr; }
-            .container { padding: 25px; margin: 20px auto; }
-            h1 { font-size: 1.8em; }
+        /* NAV */
+        header {
+            background: rgba(15,23,42,0.97);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255,255,255,0.07);
+            position: sticky; top: 0; z-index: 100;
+        }
+        nav ul { list-style: none; display: flex; justify-content: center; flex-wrap: wrap; gap: 4px; padding: 12px 20px; }
+        nav ul li a {
+            color: #94a3b8; text-decoration: none; font-size: 0.88em; font-weight: 500;
+            padding: 7px 14px; border-radius: 8px; transition: all 0.2s; letter-spacing: 0.01em;
+        }
+        nav ul li a:hover { color: white; background: rgba(99,102,241,0.25); }
+        nav ul li a.active { background: var(--accent); color: white; }
+
+        /* LAYOUT */
+        .container { width: 95%; max-width: 900px; margin: 0 auto; padding: 60px 20px 80px; }
+
+        /* HERO */
+        .hero { padding-bottom: 50px; border-bottom: 1px solid var(--border); margin-bottom: 55px; }
+        .hero-tag {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: var(--accent-light); color: var(--accent);
+            padding: 6px 16px; border-radius: 100px; font-size: 0.8em; font-weight: 600;
+            margin-bottom: 24px; border: 1px solid rgba(99,102,241,0.2); letter-spacing: 0.01em;
+        }
+        .hero h1 {
+            font-size: 3.2em; font-weight: 800; line-height: 1.1;
+            letter-spacing: -0.03em; margin-bottom: 20px;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a78bfa 100%);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+        }
+        .hero p { font-size: 1.05em; color: var(--muted); max-width: 580px; line-height: 1.85; margin-bottom: 32px; }
+        .hero p strong { color: var(--text); font-weight: 600; }
+        .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+        .btn {
+            display: inline-block; padding: 10px 22px; border-radius: 9px;
+            font-size: 0.88em; font-weight: 600; text-decoration: none; transition: all 0.2s;
+        }
+        .btn-primary { background: var(--accent); color: white; }
+        .btn-primary:hover { background: #4f46e5; transform: translateY(-1px); box-shadow: 0 4px 12px rgba(99,102,241,0.35); }
+        .btn-outline { background: var(--card); color: var(--text); border: 1px solid var(--border); }
+        .btn-outline:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-1px); }
+
+        /* SECTIONS */
+        .section { margin-bottom: 55px; }
+        h2 {
+            font-size: 1.05em; font-weight: 700; color: var(--text);
+            letter-spacing: 0.06em; text-transform: uppercase;
+            margin-bottom: 20px; display: flex; align-items: center; gap: 10px;
+        }
+        h2::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+        /* EDUCATION */
+        .edu-card {
+            background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+            padding: 24px 28px; display: flex; align-items: flex-start; gap: 18px;
+        }
+        .edu-icon {
+            width: 46px; height: 46px; background: var(--accent-light); border-radius: 10px;
+            display: flex; align-items: center; justify-content: center; font-size: 1.3em; flex-shrink: 0;
+        }
+        .edu-details h3 { font-size: 1.05em; font-weight: 700; margin-bottom: 4px; }
+        .edu-degree { color: var(--accent); font-weight: 600; font-size: 0.9em; margin-bottom: 4px; }
+        .edu-meta { color: var(--muted); font-size: 0.85em; }
+
+        /* ABOUT */
+        .about-card {
+            background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+            padding: 24px 28px; color: var(--muted); font-size: 0.97em; line-height: 1.85;
+        }
+        .about-card strong { color: var(--text); font-weight: 600; }
+
+        /* SKILLS */
+        .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+        .skill-card {
+            background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+            padding: 22px 24px;
+        }
+        .skill-card h3 {
+            font-size: 0.72em; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px;
+        }
+        .skill-card ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+        .skill-card ul li { font-size: 0.88em; color: var(--muted); }
+        .skill-card ul li strong { color: var(--text); font-weight: 600; }
+        @media (max-width: 640px) { .skills-grid { grid-template-columns: 1fr; } }
+
+        /* HIGHLIGHTS */
+        .highlight-card {
+            background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+            padding: 20px 24px; margin-bottom: 12px; border-left: 3px solid var(--accent);
+            transition: all 0.2s; font-size: 0.93em; color: var(--muted);
+        }
+        .highlight-card:hover { box-shadow: 0 6px 20px rgba(0,0,0,0.06); transform: translateX(4px); }
+        .highlight-card strong { color: var(--text); font-weight: 700; }
+        .highlight-card a { color: var(--accent); text-decoration: none; font-weight: 600; }
+        .highlight-card a:hover { text-decoration: underline; }
+
+        /* CONTACT */
+        .contact-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+        .contact-list li { font-size: 0.93em; color: var(--muted); }
+        .contact-list li strong { color: var(--text); font-weight: 600; }
+        .contact-list li a { color: var(--accent); text-decoration: none; font-weight: 500; }
+        .contact-list li a:hover { text-decoration: underline; }
+
+        /* FUN FACT */
+        .fun-card {
+            background: linear-gradient(135deg, #eef2ff, #f5f3ff);
+            border: 1px solid rgba(99,102,241,0.18); border-radius: var(--radius);
+            padding: 22px 26px; color: var(--muted); font-size: 0.93em; line-height: 1.85;
         }
 
-        footer { text-align: center; padding: 20px; background: var(--primary); color: #ecf0f1; margin-top: 50px; }
+        footer { text-align: center; padding: 24px; background: var(--primary); color: #475569; font-size: 0.83em; }
+
+        @media (max-width: 640px) {
+            .hero h1 { font-size: 2.2em; }
+            .skills-grid { grid-template-columns: 1fr; }
+            .container { padding: 40px 16px 60px; }
+            .edu-card { flex-direction: column; gap: 12px; }
+        }
     </style>
 </head>
 <body>
@@ -53,41 +159,75 @@
 
     <div class="container">
         <div class="hero">
-            <span class="tagline">International AI Advisor | CS & Economics @ Boston University</span>
-            <h1>👋 Hi, I'm <strong>Akshat Sharma</strong></h1>
+            <div class="hero-tag">✦ International AI Advisor &nbsp;·&nbsp; CS & Economics @ Boston University</div>
+            <h1>Hi, I'm<br><span class="gradient-text">Akshat Sharma</span></h1>
             <p>I architect production-grade <strong>AI Systems</strong> and <strong>Cloud Solutions</strong>. I specialize in bridging the gap between cutting-edge LLM research and economically scalable enterprise infrastructure.</p>
+            <div class="hero-actions">
+                <a href="work-experience.html" class="btn btn-primary">View Experience →</a>
+                <a href="projects.html" class="btn btn-outline">See Projects</a>
+            </div>
         </div>
 
         <div class="section">
             <h2>🎓 Education</h2>
-            <p><strong>Boston University</strong> — Boston, MA<br>
-            B.A. Computer Science &amp; Economics | Minor: Data Science<br>
-            Expected May 2026 | GPA: 3.52</p>
+            <div class="edu-card">
+                <div class="edu-icon">🏛️</div>
+                <div class="edu-details">
+                    <h3>Boston University — Boston, MA</h3>
+                    <p class="edu-degree">B.A. Computer Science &amp; Economics</p>
+                    <p class="edu-meta">Expected May 2026</p>
+                </div>
+            </div>
         </div>
 
         <div class="section">
             <h2>🚀 The Full Picture</h2>
-            <p>I am a dedicated <strong>AI Systems Engineer</strong> and <strong>Azure Cloud Practitioner</strong> focused on developing data-driven solutions. My combined background in Computer Science and Economics allows me to solve impactful problems through technology, ensuring that AI implementations are both technically sound and financially viable. Currently, I serve as an <strong>AI Affiliate</strong> at BU, leading governance initiatives to modernize education for the GenAI era.</p>
+            <div class="about-card">
+                I am a dedicated <strong>AI Systems Engineer</strong> and <strong>Azure Cloud Practitioner</strong> focused on developing data-driven solutions. My combined background in Computer Science and Economics allows me to solve impactful problems through technology, ensuring that AI implementations are both technically sound and financially viable. Currently, I serve as an <strong>AI Affiliate</strong> at BU, leading governance initiatives to modernize education for the GenAI era.
+            </div>
         </div>
 
         <div class="section">
             <h2>🛠️ Technical Ecosystem</h2>
-            <div class="grid">
-                <div class="grid-item">
-                    <h3>Engineering & AI</h3>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Frontend</h3>
                     <ul>
-                        <li><strong>LLMOps:</strong> LangChain, LlamaIndex, RAG Pipelines</li>
-                        <li><strong>ML Tools:</strong> PyTorch, Scikit-learn, OpenAI APIs</li>
-                        <li><strong>Languages:</strong> Python, JavaScript/TS, Java, SQL, C, R</li>
+                        <li><strong>Frameworks:</strong> React, Next.js, TypeScript</li>
+                        <li><strong>Styling:</strong> HTML/CSS, component design, state management</li>
+                        <li><strong>Testing:</strong> Playwright</li>
                     </ul>
                 </div>
-                <div class="grid-item">
-                    <h3>Cloud & Backend</h3>
+                <div class="skill-card">
+                    <h3>Backend</h3>
                     <ul>
-                        <li><strong>Cloud:</strong> AWS (S3, Lambda, IAM), Azure</li>
-                        <li><strong>Ops:</strong> Docker, Kubernetes, CI/CD, Git</li>
-                        <li><strong>Architecture:</strong> React, Next.js, Node.js, FastAPI, FAISS</li>
-                        <li><strong>Testing:</strong> Playwright</li>
+                        <li><strong>Languages:</strong> Python, JavaScript/TS, Java, SQL, C, R</li>
+                        <li><strong>Frameworks:</strong> Node.js, Express, FastAPI</li>
+                        <li><strong>APIs:</strong> REST, tRPC, server architecture, middleware</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Databases</h3>
+                    <ul>
+                        <li><strong>Relational:</strong> PostgreSQL, MySQL</li>
+                        <li><strong>NoSQL/Cache:</strong> Redis, MongoDB</li>
+                        <li><strong>Techniques:</strong> Schema design, query optimization, FAISS</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>DevOps & Deployment</h3>
+                    <ul>
+                        <li><strong>Cloud:</strong> AWS (EC2, S3, RDS, Lambda), Azure</li>
+                        <li><strong>Containers:</strong> Docker, Kubernetes</li>
+                        <li><strong>Workflow:</strong> CI/CD, Railway, Git, Linux</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>AI Integration</h3>
+                    <ul>
+                        <li><strong>LLMs:</strong> Claude API, OpenAI API, LangChain, LlamaIndex</li>
+                        <li><strong>Techniques:</strong> RAG Pipelines, agentic tool-use loops, embeddings</li>
+                        <li><strong>ML:</strong> PyTorch, Scikit-learn, prompt engineering</li>
                     </ul>
                 </div>
             </div>
@@ -95,33 +235,34 @@
 
         <div class="section">
             <h2>🏆 High-Impact Work</h2>
-            <div class="project-highlight">
+            <div class="highlight-card">
                 <strong>Terrier GPT (Institutional RAG):</strong> Engineered a production-grade pipeline to vectorize and index 5,000+ university documents, powering an AI assistant for 10,000+ interactions.
             </div>
-            <div class="project-highlight">
+            <div class="highlight-card">
                 <strong>Kazakhstan Government Advisory:</strong> Invited as an international speaker to advise state stakeholders on GenAI adoption and cloud-native infrastructure strategy.
             </div>
-            <div class="project-highlight">
-                <strong>GoNiva (Innovation Pathway):</strong> Co-founded an AI travel platform accepted into the <a href="https://www.bu.edu/innovate/profile/goniva/" target="_blank" style="color:var(--accent); text-decoration:none; font-weight:bold;">Innovate@BU Pathway</a>.
+            <div class="highlight-card">
+                <strong>GoNiva (Innovation Pathway):</strong> Co-founded an AI travel platform accepted into the <a href="https://www.bu.edu/innovate/profile/goniva/" target="_blank">Innovate@BU Pathway</a>.
             </div>
         </div>
 
         <div class="section">
             <h2>📫 How to Reach Me</h2>
-            <p>I am always looking to collaborate on high-impact AI/ML projects.</p>
-            <ul>
-                <li><strong>Email:</strong> <a href="mailto:akshat1.sunil@gmail.com" style="color:var(--accent)">akshat1.sunil@gmail.com</a></li>
-                <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sharma-akshat03/" target="_blank" style="color:var(--accent)">sharma-akshat03</a></li>
-                <li><strong>GitHub:</strong> <a href="https://github.com/AkshatSharma03" target="_blank" style="color:var(--accent)">AkshatSharma03</a></li>
+            <ul class="contact-list">
+                <li><strong>Email:</strong> <a href="mailto:akshat1.sunil@gmail.com">akshat1.sunil@gmail.com</a></li>
+                <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sharma-akshat03/" target="_blank">sharma-akshat03</a></li>
+                <li><strong>GitHub:</strong> <a href="https://github.com/AkshatSharma03" target="_blank">AkshatSharma03</a></li>
             </ul>
         </div>
 
         <div class="section">
             <h2>⚡ Fun Fact</h2>
-            <p>I am passionate about "Cross-Border Knowledge Transfer"—sharing AI expertise globally to help governments and institutions navigate the complexities of digital transformation.</p>
+            <div class="fun-card">
+                I am passionate about "Cross-Border Knowledge Transfer"—sharing AI expertise globally to help governments and institutions navigate the complexities of digital transformation.
+            </div>
         </div>
     </div>
 
-    <footer><p>&copy; 2026 Akshat Sharma. All rights reserved.</p></footer>
+    <footer><p>© 2026 Akshat Sharma. All rights reserved.</p></footer>
 </body>
 </html>

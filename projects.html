@@ -4,42 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects | Akshat Sharma</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* MASTER SHARED CSS */
-        :root { --primary: #2c3e50; --accent: #1e90ff; --bg: #f5f5f5; --card-bg: #ffffff; --text: #333; --nav-text: #ecf0f1; }
-        * { box-sizing: border-box; }
-        body { font-family: 'Segoe UI', sans-serif; background: var(--bg); margin: 0; color: var(--text); line-height: 1.6; }
-        
-        /* HEADER */
-        header { background-color: var(--primary); padding: 15px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.2); }
-        nav ul { list-style: none; display: flex; justify-content: center; flex-wrap: wrap; margin: 0; padding: 0; }
-        nav ul li { margin: 5px 10px; }
-        nav ul li a { text-decoration: none; color: var(--nav-text); font-size: 0.95em; font-weight: 500; padding: 8px 12px; border-radius: 5px; transition: 0.3s; }
-        nav ul li a:hover, nav ul li a.active { background: var(--accent); color: white; }
-
-        /* CONTAINER */
-        .container { width: 95%; max-width: 950px; margin: 40px auto; padding: 0 20px; }
-        h1 { color: var(--primary); font-size: 2.2em; text-align: center; margin-bottom: 40px; }
-        
-        .project-card {
-            background: white; border-radius: 12px; padding: 30px; margin-bottom: 30px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-left: 6px solid var(--accent);
+        :root {
+            --primary: #0f172a;
+            --accent: #6366f1;
+            --accent2: #8b5cf6;
+            --accent-light: #eef2ff;
+            --bg: #f8fafc;
+            --card: #ffffff;
+            --text: #1e293b;
+            --muted: #64748b;
+            --border: #e2e8f0;
+            --radius: 12px;
         }
-        .project-header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; }
-        .project-header h3 { margin: 0; color: var(--primary); font-size: 1.5rem; }
-        .badge { background: #e1f0ff; color: var(--accent); padding: 5px 12px; border-radius: 20px; font-size: 0.85em; font-weight: bold; }
-        
-        .tech-tags { margin: 15px 0; display: flex; flex-wrap: wrap; gap: 8px; }
-        .tag { background: #eee; color: #555; padding: 3px 10px; border-radius: 4px; font-size: 0.85em; font-family: monospace; }
-        .project-link { display: inline-block; margin-top: 10px; color: var(--accent); text-decoration: none; font-weight: bold; }
-        .project-link:hover { text-decoration: underline; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+
+        header {
+            background: rgba(15,23,42,0.97);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255,255,255,0.07);
+            position: sticky; top: 0; z-index: 100;
+        }
+        nav ul { list-style: none; display: flex; justify-content: center; flex-wrap: wrap; gap: 4px; padding: 12px 20px; }
+        nav ul li a {
+            color: #94a3b8; text-decoration: none; font-size: 0.88em; font-weight: 500;
+            padding: 7px 14px; border-radius: 8px; transition: all 0.2s; letter-spacing: 0.01em;
+        }
+        nav ul li a:hover { color: white; background: rgba(99,102,241,0.25); }
+        nav ul li a.active { background: var(--accent); color: white; }
+
+        .container { width: 95%; max-width: 900px; margin: 0 auto; padding: 60px 20px 80px; }
+
+        .page-header { margin-bottom: 48px; }
+        .page-header h1 { font-size: 2em; font-weight: 800; letter-spacing: -0.02em; }
+        .page-header p { color: var(--muted); font-size: 0.97em; margin-top: 8px; }
+
+        .project-card {
+            background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+            padding: 28px 30px; margin-bottom: 16px; transition: all 0.2s;
+            border-top: 3px solid transparent;
+        }
+        .project-card:hover {
+            border-top-color: var(--accent);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.07);
+            transform: translateY(-2px);
+        }
+
+        .project-header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 10px; margin-bottom: 12px; }
+        .project-title { font-size: 1.1em; font-weight: 700; color: var(--text); }
+        .badge {
+            background: var(--accent-light); color: var(--accent);
+            padding: 4px 12px; border-radius: 100px; font-size: 0.75em; font-weight: 700;
+            white-space: nowrap; letter-spacing: 0.02em;
+        }
+
+        .tech-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 18px; }
+        .tag {
+            background: #f1f5f9; color: #475569; padding: 3px 10px;
+            border-radius: 6px; font-size: 0.78em; font-family: 'Menlo', 'Consolas', monospace;
+            border: 1px solid var(--border);
+        }
+
+        .project-bullets { list-style: none; margin-bottom: 18px; display: flex; flex-direction: column; gap: 8px; }
+        .project-bullets li {
+            font-size: 0.88em; color: var(--muted); padding-left: 16px; position: relative; line-height: 1.75;
+        }
+        .project-bullets li::before {
+            content: '→'; position: absolute; left: 0; color: var(--accent); font-weight: 700; font-size: 0.85em;
+        }
+        .project-bullets li strong { color: var(--text); font-weight: 600; }
+
+        .project-links { display: flex; gap: 10px; flex-wrap: wrap; }
+        .project-link {
+            display: inline-flex; align-items: center; gap: 6px;
+            color: var(--accent); text-decoration: none; font-size: 0.85em; font-weight: 600;
+            padding: 7px 14px; border: 1.5px solid rgba(99,102,241,0.3); border-radius: 8px;
+            transition: all 0.2s;
+        }
+        .project-link:hover { background: var(--accent-light); border-color: var(--accent); }
+
+        footer { text-align: center; padding: 24px; background: var(--primary); color: #475569; font-size: 0.83em; }
 
         @media (max-width: 600px) {
-            .project-header h3 { width: 100%; margin-bottom: 5px; }
-            .project-card { padding: 20px; }
+            .container { padding: 40px 16px 60px; }
+            .project-card { padding: 22px 20px; }
+            .project-header { flex-direction: column; }
         }
-
-        footer { text-align: center; padding: 20px; background: var(--primary); color: #ecf0f1; margin-top: 50px; }
     </style>
 </head>
 <body>
@@ -52,60 +106,157 @@
     </ul></nav></header>
 
     <div class="container">
-        <h1>🚀 Featured Projects</h1>
-
-        <!-- Project 1 -->
-        <div class="project-card">
-            <div class="project-header">
-                <h3>🏛️ Kazakhstan Government AI Seminar</h3>
-                <span class="badge">International Advisory</span>
-            </div>
-            <p>Invited to advise government stakeholders on <strong>AI Ecosystems</strong>, GenAI-powered public services, and the economic impact of cloud-native AI integration.</p>
-            <a href="https://www.instagram.com/p/DTXGPr1DChq/" target="_blank" class="project-link">View Official Verification →</a>
+        <div class="page-header">
+            <h1>🚀 Featured Projects</h1>
+            <p>A selection of AI, research, and product work.</p>
         </div>
 
-        <!-- Project 2 -->
+        <!-- Kazakhstan Economic Intelligence Dashboard -->
         <div class="project-card">
             <div class="project-header">
-                <h3>🌍 GoNiva: AI Travel Discovery</h3>
+                <span class="project-title">📊 Kazakhstan Economic Intelligence Dashboard</span>
+                <span class="badge">Full-Stack / AI</span>
+            </div>
+            <div class="tech-tags">
+                <span class="tag">React</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">Express</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">TypeScript</span>
+            </div>
+            <ul class="project-bullets">
+                <li>Engineered <strong>full-stack data visualization platform</strong>: React frontend with Recharts, Express.js backend API, and Express serving production builds.</li>
+                <li>Designed <strong>responsive component architecture with strict TypeScript</strong> (no <code style="background:#f1f5f9;padding:1px 5px;border-radius:4px;font-size:0.9em">any</code>); implemented five UI modes (Dashboard, Chat, Search, Analytics, Data Upload) with client-side routing.</li>
+                <li>Built Express backend with <strong>custom middleware for caching</strong> (LRU cache with O(1) get/put), rate limiting (20 req/15m), and security (Helmet.js headers, input sanitization).</li>
+                <li>Integrated <strong>Claude API with agentic tool-use loop</strong> (up to 8 turns) for dynamic chart generation; implemented CSV parsing with RFC 4180 compliance.</li>
+                <li>Deployed to <strong>production on Railway</strong>; set up CI/CD pipeline with Vite build optimization; achieved sub-second response times with LRU caching strategy.</li>
+            </ul>
+            <div class="project-links">
+                <a href="https://super-dash-production.up.railway.app/" target="_blank" class="project-link">Live Demo →</a>
+                <a href="https://github.com/AkshatSharma03/super-dash" target="_blank" class="project-link">GitHub Repo →</a>
+            </div>
+        </div>
+
+        <!-- Pacman Game AI Agent -->
+        <div class="project-card">
+            <div class="project-header">
+                <span class="project-title">👾 Pacman Game AI Agent</span>
+                <span class="badge">AI / Algorithms</span>
+            </div>
+            <div class="tech-tags">
+                <span class="tag">Java</span>
+                <span class="tag">Data Structures</span>
+                <span class="tag">Graph Algorithms</span>
+                <span class="tag">System Design</span>
+            </div>
+            <ul class="project-bullets">
+                <li>Implemented <strong>optimal pathfinding system using A* and Dijkstra algorithms</strong> on complex state-space graphs; designed problem encoding where vertices represent game states.</li>
+                <li>Built <strong>heuristic function adhering to consistency and admissibility constraints</strong>; optimized search performance through algorithm selection and state representation.</li>
+                <li>Engineered solution handling <strong>adversarial dynamics (ghost agents)</strong> with risk-aware pathfinding; maintained algorithmic correctness across varying board configurations and difficulty levels.</li>
+                <li>Demonstrates <strong>systems thinking applicable to backend optimization</strong>, database query planning, and distributed system design.</li>
+            </ul>
+            <div class="project-links">
+                <a href="https://github.com/AkshatSharma03/CS440" target="_blank" class="project-link">GitHub Repo →</a>
+                <a href="https://youtu.be/jb2v1sPYw3Y" target="_blank" class="project-link">YouTube Demo →</a>
+            </div>
+        </div>
+
+        <!-- GoNiva -->
+        <div class="project-card">
+            <div class="project-header">
+                <span class="project-title">🌍 GoNiva: AI Travel Discovery</span>
                 <span class="badge">Startup / Innovate@BU</span>
             </div>
-            <div class="tech-tags"><span class="tag">Next.js</span><span class="tag">PostgreSQL</span><span class="tag">OpenAI API</span></div>
-            <p>Architected a full-stack travel planning platform accepted into the BU Innovation Pathway. Uses LLMs to generate dynamic, personalized itineraries based on user preferences.</p>
-            <a href="https://www.bu.edu/innovate/profile/goniva/" target="_blank" class="project-link">View Innovation Profile →</a>
+            <div class="tech-tags">
+                <span class="tag">Next.js</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">tRPC</span>
+                <span class="tag">OpenAI API</span>
+            </div>
+            <ul class="project-bullets">
+                <li>Architected and shipped <strong>production full-stack web application</strong> (Next.js frontend, Node.js/Express backend, PostgreSQL database, tRPC type-safe API layer) from concept to deployment on Railway.</li>
+                <li>Designed <strong>component hierarchy and state management in React</strong>; implemented responsive UI with real-time updates and optimistic client-side caching.</li>
+                <li>Built <strong>REST API endpoints in Node.js</strong> with proper error handling, request validation, and rate limiting; integrated OpenAI API for conversational features.</li>
+                <li>Designed <strong>PostgreSQL schema for relational data modeling</strong>; implemented database migrations and query optimization for performance at scale.</li>
+                <li>Achieved <strong>10% acceptance rate</strong> into competitive BU Innovation Pathway program; recommended by investors for market readiness and technical execution.</li>
+            </ul>
+            <div class="project-links">
+                <a href="https://www.bu.edu/innovate/profile/goniva/" target="_blank" class="project-link">Innovation Profile →</a>
+                <a href="https://youtu.be/TrPc5A3VqNo" target="_blank" class="project-link">YouTube Demo →</a>
+            </div>
         </div>
 
-        <!-- Project 3 -->
+        <!-- Guest Lecturer -->
         <div class="project-card">
             <div class="project-header">
-                <h3>🐶 Terrier GPT: Institutional RAG</h3>
+                <span class="project-title">🏛️ Guest Lecturer — Global AI Perspectives</span>
+                <span class="badge">International Advisory</span>
+            </div>
+            <ul class="project-bullets">
+                <li>Invited speaker at <strong>government-affiliated AI seminar</strong> to present on global AI ecosystem dynamics, frontier model capabilities, and competitive landscape between U.S. and emerging markets.</li>
+                <li>Delivered <strong>policy-oriented analysis on AI governance frameworks</strong>, compute controls, and liability mechanisms as tools for managing AI risks at scale.</li>
+                <li>Facilitated <strong>cross-border dialogue with international policy stakeholders</strong> on evidence-based AI adoption, distinguishing hype from capability, and balancing innovation with safety.</li>
+                <li>Demonstrated expertise <strong>bridging technical depth</strong> (model architectures, training dynamics) with policy implications (market structure, competitive advantage, regulatory design).</li>
+            </ul>
+            <div class="project-links">
+                <a href="https://www.instagram.com/p/DTXGPr1DChq/" target="_blank" class="project-link">Event Coverage →</a>
+            </div>
+        </div>
+
+        <!-- Terrier GPT -->
+        <div class="project-card">
+            <div class="project-header">
+                <span class="project-title">🐶 Terrier GPT: Institutional RAG</span>
                 <span class="badge">Enterprise Systems</span>
             </div>
-            <div class="tech-tags"><span class="tag">Python</span><span class="tag">FAISS</span><span class="tag">GPT-4</span></div>
-            <p>Built a knowledge retrieval engine for Boston University, vectorizing 5,000+ docs to automate support tickets. Handled 10,000+ interactions during pilot.</p>
+            <div class="tech-tags">
+                <span class="tag">Python</span>
+                <span class="tag">FAISS</span>
+                <span class="tag">GPT-4</span>
+                <span class="tag">LangChain</span>
+            </div>
+            <ul class="project-bullets">
+                <li>Built a <strong>production-grade RAG pipeline</strong> for Boston University, vectorizing and indexing 5,000+ institutional documents into a FAISS database to power an internal AI assistant.</li>
+                <li>Developed scalable backend logic to support <strong>10,000+ interactions</strong> during pilot, leveraging resolved support tickets to continuously refine retrieval quality.</li>
+            </ul>
         </div>
 
-        <!-- Project 4 -->
+        <!-- Mammo-CLIP -->
         <div class="project-card">
             <div class="project-header">
-                <h3>🏥 Medical Imaging: Mammo-CLIP</h3>
+                <span class="project-title">🏥 Medical Imaging: Mammo-CLIP</span>
                 <span class="badge">Research / ML</span>
             </div>
-            <div class="tech-tags"><span class="tag">PyTorch</span><span class="tag">CLIP</span><span class="tag">Scikit-learn</span></div>
-            <p>Fine-tuned multimodal models for breast cancer detection and implemented <strong>bias-detection frameworks</strong> to enhance clinical accuracy.</p>
+            <div class="tech-tags">
+                <span class="tag">PyTorch</span>
+                <span class="tag">CLIP</span>
+                <span class="tag">Scikit-learn</span>
+            </div>
+            <ul class="project-bullets">
+                <li>Fine-tuned multimodal models for <strong>breast cancer detection</strong> and implemented bias-detection frameworks to enhance clinical accuracy across demographic groups.</li>
+                <li>Benchmarked model performance across <strong>40,000+ medical images</strong> using OpenAI's CLIP model for zero-shot annotation and validation.</li>
+            </ul>
         </div>
 
-        <!-- Project 5 -->
+        <!-- Pravaha -->
         <div class="project-card">
             <div class="project-header">
-                <h3>💬 Pravaha: AI Employee Engagement</h3>
+                <span class="project-title">💬 Pravaha: AI Employee Engagement</span>
                 <span class="badge">Automation</span>
             </div>
-            <div class="tech-tags"><span class="tag">FastAPI</span><span class="tag">LlamaIndex</span><span class="tag">Redis</span></div>
-            <p>Developed a conversational Slack bot using LlamaIndex for context-aware feedback and persistent state management with Redis.</p>
+            <div class="tech-tags">
+                <span class="tag">FastAPI</span>
+                <span class="tag">LlamaIndex</span>
+                <span class="tag">Redis</span>
+            </div>
+            <ul class="project-bullets">
+                <li>Developed a <strong>conversational Slack bot</strong> using LlamaIndex for context-aware employee feedback and persistent state management with Redis.</li>
+            </ul>
         </div>
+
     </div>
 
-    <footer><p>&copy; 2026 Akshat Sharma. All rights reserved.</p></footer>
+    <footer><p>© 2026 Akshat Sharma. All rights reserved.</p></footer>
 </body>
 </html>
