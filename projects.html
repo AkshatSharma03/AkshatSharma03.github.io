@@ -118,22 +118,50 @@
                 <span class="badge">Full-Stack / AI</span>
             </div>
             <div class="tech-tags">
-                <span class="tag">React</span>
-                <span class="tag">Node.js</span>
-                <span class="tag">Express</span>
-                <span class="tag">PostgreSQL</span>
+                <span class="tag">React 18</span>
                 <span class="tag">TypeScript</span>
+                <span class="tag">Vite</span>
+                <span class="tag">Recharts</span>
+                <span class="tag">shadcn/ui</span>
+                <span class="tag">Express</span>
+                <span class="tag">SQLite</span>
+                <span class="tag">Claude API</span>
             </div>
             <ul class="project-bullets">
-                <li>Engineered <strong>full-stack data visualization platform</strong>: React frontend with Recharts, Express.js backend API, and Express serving production builds.</li>
-                <li>Designed <strong>responsive component architecture with strict TypeScript</strong> (no <code style="background:#f1f5f9;padding:1px 5px;border-radius:4px;font-size:0.9em">any</code>); implemented five UI modes (Dashboard, Chat, Search, Analytics, Data Upload) with client-side routing.</li>
-                <li>Built Express backend with <strong>custom middleware for caching</strong> (LRU cache with O(1) get/put), rate limiting (20 req/15m), and security (Helmet.js headers, input sanitization).</li>
-                <li>Integrated <strong>Claude API with agentic tool-use loop</strong> (up to 8 turns) for dynamic chart generation; implemented CSV parsing with RFC 4180 compliance.</li>
-                <li>Deployed to <strong>production on Railway</strong>; set up CI/CD pipeline with Vite build optimization; achieved sub-second response times with LRU caching strategy.</li>
+                <li>Engineered <strong>full-stack data visualization platform</strong> with React 18 + Recharts frontend, Express 5 backend, and SQLite (better-sqlite3) — five UI modes: Dashboard, Chat, Search, Analytics, and Data Upload.</li>
+                <li>Designed <strong>strict TypeScript architecture with shadcn/ui + Radix UI</strong>; implemented drag-and-drop CSV parsing (RFC 4180 state machine) and SVG/HTML report export.</li>
+                <li>Built <strong>8 proprietary algorithms from scratch</strong>: OLS regression, CAGR, Hodrick-Prescott filter, Pearson correlation, HHI index, Z-score anomaly detection, K-Means++ clustering, and Trie autocomplete (O(m)).</li>
+                <li>Integrated <strong>Claude API with agentic tool-use loop</strong> (up to 8 turns) for dynamic chart generation; custom LRU cache (doubly-linked list + Map) with O(1) get/put for LLM query canonicalization.</li>
+                <li>Deployed to <strong>production on Railway</strong>; rate limiting (20 req/15m per IP), Helmet.js security headers, JWT auth with bcryptjs; Vite 5 build with sub-second response times.</li>
             </ul>
             <div class="project-links">
                 <a href="https://super-dash-production.up.railway.app/" target="_blank" class="project-link">Live Demo →</a>
                 <a href="https://github.com/AkshatSharma03/super-dash" target="_blank" class="project-link">GitHub Repo →</a>
+            </div>
+        </div>
+
+        <!-- Web Scraper -->
+        <div class="project-card">
+            <div class="project-header">
+                <span class="project-title">🔍 Google Search Scraper</span>
+                <span class="badge">Python / API Tool</span>
+            </div>
+            <div class="tech-tags">
+                <span class="tag">Python</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">BeautifulSoup4</span>
+                <span class="tag">Serper.dev</span>
+                <span class="tag">trafilatura</span>
+                <span class="tag">Docker</span>
+            </div>
+            <ul class="project-bullets">
+                <li>Built a <strong>Python tool for extracting Google search results</strong> across multiple countries and languages via the Serper.dev API, with support for single queries, batch CSV/JSON processing, and a REST API endpoint.</li>
+                <li>Implemented <strong>full-page content extraction</strong> using trafilatura and BeautifulSoup4; supports geo-targeting (<code style="background:#f1f5f9;padding:1px 5px;border-radius:4px;font-size:0.9em">--country</code>, <code style="background:#f1f5f9;padding:1px 5px;border-radius:4px;font-size:0.9em">--language</code>) and date-range filtering for recency-aware research workflows.</li>
+                <li>Exposed a <strong>FastAPI REST server</strong> (<code style="background:#f1f5f9;padding:1px 5px;border-radius:4px;font-size:0.9em">POST /api/search</code>) with Pydantic v2 validation; containerized with Docker for portable, env-var-driven deployment.</li>
+                <li>Outputs <strong>timestamped CSV reports</strong> with per-row provenance (query, country, language, URL, description, extracted content) suitable for downstream NLP and research pipelines.</li>
+            </ul>
+            <div class="project-links">
+                <a href="https://github.com/AkshatSharma03/web-scraper" target="_blank" class="project-link">GitHub Repo →</a>
             </div>
         </div>
 
