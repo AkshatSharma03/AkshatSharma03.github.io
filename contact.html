@@ -4,78 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Akshat Sharma</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #0f172a;
-            --accent: #6366f1;
-            --accent2: #8b5cf6;
-            --accent-light: #eef2ff;
-            --bg: #f8fafc;
-            --card: #ffffff;
-            --text: #1e293b;
-            --muted: #64748b;
-            --border: #e2e8f0;
-            --radius: 12px;
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
-
-        header {
-            background: rgba(15,23,42,0.97);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255,255,255,0.07);
-            position: sticky; top: 0; z-index: 100;
-        }
-        nav ul { list-style: none; display: flex; justify-content: center; flex-wrap: wrap; gap: 4px; padding: 12px 20px; }
-        nav ul li a {
-            color: #94a3b8; text-decoration: none; font-size: 0.88em; font-weight: 500;
-            padding: 7px 14px; border-radius: 8px; transition: all 0.2s; letter-spacing: 0.01em;
-        }
-        nav ul li a:hover { color: white; background: rgba(99,102,241,0.25); }
-        nav ul li a.active { background: var(--accent); color: white; }
-
-        .container { width: 95%; max-width: 680px; margin: 0 auto; padding: 80px 20px; text-align: center; }
-
-        .page-header { margin-bottom: 16px; }
-        .page-header h1 { font-size: 2.2em; font-weight: 800; letter-spacing: -0.02em; }
-        .page-header p { color: var(--muted); font-size: 0.97em; margin-top: 10px; }
-
-        .contact-grid { display: flex; flex-direction: column; gap: 12px; margin-top: 40px; }
-
-        .contact-link {
-            display: flex; align-items: center; gap: 18px;
-            background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
-            padding: 20px 26px; text-decoration: none; color: var(--text);
-            transition: all 0.2s; text-align: left;
-        }
-        .contact-link:hover {
-            border-color: var(--accent); background: var(--accent-light);
-            transform: translateY(-2px); box-shadow: 0 6px 20px rgba(99,102,241,0.1);
-        }
-
-        .contact-icon-wrap {
-            width: 46px; height: 46px; border-radius: 10px; background: var(--accent-light);
-            display: flex; align-items: center; justify-content: center; flex-shrink: 0;
-        }
-        .contact-icon-wrap img { width: 24px; height: 24px; }
-
-        .contact-text .label { font-size: 0.75em; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 2px; }
-        .contact-text .value { font-size: 0.95em; font-weight: 600; color: var(--text); }
-
-        .contact-arrow { margin-left: auto; color: var(--muted); font-size: 1.1em; transition: transform 0.2s; }
-        .contact-link:hover .contact-arrow { transform: translateX(4px); color: var(--accent); }
-
-        footer { text-align: center; padding: 24px; background: var(--primary); color: #475569; font-size: 0.83em; margin-top: 60px; }
-
-        @media (max-width: 500px) {
-            .container { padding: 50px 16px; }
-            .contact-link { padding: 16px 18px; gap: 14px; }
-            .contact-text .value { font-size: 0.88em; }
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header><nav><ul>
