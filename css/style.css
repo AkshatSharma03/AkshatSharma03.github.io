@@ -5,22 +5,24 @@
   }
   
   body {
-    font-family: Arial, sans-serif;
+    font-family: 'Courier New', monospace;
     line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #f5f5f5;
+    color: #000;
   }
   
   header {
-    background: #333;
-    color: #fff;
+    background: #e0e0e0;
+    color: #000;
     padding: 20px 0;
     text-align: center;
+    border-bottom: 3px double #000;
   }
   
   nav {
-    background: #444;
+    background: #d0d0d0;
     padding: 10px 0;
+    border-bottom: 2px solid #000;
   }
   
   nav ul {
@@ -34,8 +36,13 @@
   }
   
   nav ul li a {
-    color: #fff;
+    color: #000;
     text-decoration: none;
+    font-weight: bold;
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline;
   }
   
   .container {
@@ -46,22 +53,25 @@
   
   h1, h2 {
     margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
   }
   
   .project, .assignment {
     background: #fff;
     padding: 15px;
     margin-bottom: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 2px solid #000;
+    box-shadow: 4px 4px 0 #000;
   }
   
   footer {
-    background: #333;
-    color: #fff;
+    background: #e0e0e0;
+    color: #000;
     text-align: center;
     padding: 10px 0;
     margin-top: 20px;
+    border-top: 3px double #000;
   }
   
   footer p {
@@ -69,11 +79,14 @@
   }
   
   a {
-    color: #3498db;
+    color: #000;
+    text-decoration: underline;
   }
   
   a:hover {
-    text-decoration: underline;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
   }
   
   section {
