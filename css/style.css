@@ -183,7 +183,7 @@ nav ul li a:focus-visible,
 
 .hero-tag {
     display: inline-block;
-    background: var(--neon-yellow);
+    background: var(--accent-soft);
     color: var(--ink-black);
     padding: 8px 16px;
     margin-bottom: 24px;
@@ -207,7 +207,7 @@ nav ul li a:focus-visible,
 }
 
 .gradient-text {
-    color: var(--neon-pink);
+    color: var(--accent-strong);
     font-weight: 900;
     border-bottom: 3px solid var(--ink-black);
     padding-bottom: 4px;
@@ -269,13 +269,13 @@ h2 {
     letter-spacing: 2px;
     margin-bottom: 24px;
     padding: 14px 20px;
-    background: var(--neon-cyan);
+    background: var(--accent-color);
     color: var(--ink-black);
     font-family: var(--font-heading);
     border: 2px solid var(--ink-black);
     display: inline-block;
     position: relative;
-    box-shadow: 3px 3px 0 var(--neon-yellow);
+    box-shadow: 3px 3px 0 var(--accent-soft);
 }
 
 h2::before {
@@ -285,7 +285,7 @@ h2::before {
     right: 12px;
     width: 12px;
     height: 12px;
-    background: var(--neon-pink);
+    background: var(--accent-strong);
     transform: rotate(45deg);
 }
 
@@ -438,7 +438,7 @@ h2::before {
 .highlight-card {
     padding: 20px;
     background: var(--paper-white);
-    border-left: 4px solid var(--neon-pink);
+    border-left: 4px solid var(--accent-strong);
     margin-bottom: 16px;
 }
 
@@ -454,14 +454,14 @@ h2::before {
 }
 
 .highlight-card a {
-    color: var(--neon-cyan);
+    color: var(--accent-color);
     font-weight: 600;
     text-decoration: underline;
     text-decoration-style: dotted;
 }
 
 .highlight-card a:hover {
-    background: var(--neon-cyan);
+    background: var(--accent-color);
     color: var(--paper-white);
     text-decoration: none;
     padding: 2px 6px;
@@ -612,8 +612,8 @@ h2::before {
 }
 
 .assignment-card.featured {
-    border: 2px solid var(--neon-pink);
-    box-shadow: 3px 3px 0 var(--neon-pink);
+    border: 2px solid var(--accent-strong);
+    box-shadow: 3px 3px 0 var(--accent-strong);
 }
 
 .assignment-num {
@@ -1019,7 +1019,7 @@ h2::before {
     font-size: 1.05em;
     line-height: 1.8;
     color: var(--ink-gray);
-    border-left: 4px solid var(--neon-pink);
+    border-left: 4px solid var(--accent-strong);
     font-style: italic;
 }
 
