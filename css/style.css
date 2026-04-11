@@ -41,19 +41,17 @@ body {
     background-size: 80px 80px, 100px 100px, 60px 60px, 90px 90px, 70px 70px;
 }
 
-/* Memphis Navigation */
+/* Memphis Navigation - Clean & Stable */
 header {
     background: var(--card-bg);
-    position: sticky;
-    top: 0;
+    position: relative;
     z-index: 100;
-    border-bottom: 4px solid var(--neon-pink);
+    border-bottom: 3px solid var(--neon-pink);
 }
 
 nav {
     background: var(--card-bg);
     padding: 0;
-    border-bottom: 3px dashed var(--neon-cyan);
 }
 
 nav ul {
@@ -67,8 +65,6 @@ nav ul {
 
 nav ul li {
     margin: 0;
-    flex: 1;
-    min-width: 140px;
 }
 
 nav ul li a {
@@ -76,28 +72,48 @@ nav ul li a {
     color: var(--text-dark);
     text-decoration: none;
     font-weight: 800;
-    padding: 20px 16px;
+    padding: 18px 24px;
     background: var(--card-bg);
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 2px;
-    transition: background-color 0.15s ease, color 0.15s ease;
-    border-bottom: 4px solid transparent;
-    margin-bottom: -4px;
+    transition: none;
     font-size: 0.9em;
-    will-change: background-color;
+    border-right: 2px solid var(--neon-pink);
 }
 
-nav ul li:nth-child(1) a { border-bottom-color: var(--neon-pink); }
-nav ul li:nth-child(2) a { border-bottom-color: var(--neon-cyan); }
-nav ul li:nth-child(3) a { border-bottom-color: var(--neon-yellow); }
-nav ul li:nth-child(4) a { border-bottom-color: var(--neon-green); }
-nav ul li:nth-child(5) a { border-bottom-color: var(--neon-orange); }
+nav ul li:last-child a {
+    border-right: none;
+}
 
-nav ul li a:hover,
-nav ul li a.active {
+nav ul li:nth-child(1) a:hover,
+nav ul li:nth-child(1) a.active {
     background: var(--neon-pink);
     color: var(--text-light);
+}
+
+nav ul li:nth-child(2) a:hover,
+nav ul li:nth-child(2) a.active {
+    background: var(--neon-cyan);
+    color: var(--text-dark);
+}
+
+nav ul li:nth-child(3) a:hover,
+nav ul li:nth-child(3) a.active {
+    background: var(--neon-yellow);
+    color: var(--text-dark);
+}
+
+nav ul li:nth-child(4) a:hover,
+nav ul li:nth-child(4) a.active {
+    background: var(--neon-green);
+    color: var(--text-dark);
+}
+
+nav ul li:nth-child(5) a:hover,
+nav ul li:nth-child(5) a.active {
+    background: var(--neon-orange);
+    color: var(--text-dark);
 }
 
 /* Container */
