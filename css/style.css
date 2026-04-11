@@ -720,6 +720,22 @@ h2::before {
     box-shadow: 2px 2px 0 var(--ink-black);
 }
 
+.section-label-spaced {
+    margin-top: 40px;
+}
+
+.inline-code {
+    display: inline-block;
+    background: var(--accent-soft);
+    border: 1px solid var(--ink-black);
+    border-radius: 3px;
+    padding: 1px 5px;
+    font-size: 0.9em;
+    line-height: 1.2;
+    color: var(--ink-black);
+    font-family: "Courier New", Courier, monospace;
+}
+
 /* Timeline - Hand-drawn */
 .timeline {
     position: relative;

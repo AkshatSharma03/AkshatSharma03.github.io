@@ -66,8 +66,8 @@
             </div>
             <ul class="project-bullets">
                 <li>Built a <strong>Python tool for extracting Google search results</strong> across multiple countries and languages via the Serper.dev API, with support for single queries, batch CSV/JSON processing, and a REST API endpoint.</li>
-                <li>Implemented <strong>full-page content extraction</strong> using trafilatura and BeautifulSoup4; supports geo-targeting (<code style="background:#f1f5f9;padding:1px 5px;border-radius:4px;font-size:0.9em">--country</code>, <code style="background:#f1f5f9;padding:1px 5px;border-radius:4px;font-size:0.9em">--language</code>) and date-range filtering for recency-aware research workflows.</li>
-                <li>Exposed a <strong>FastAPI REST server</strong> (<code style="background:#f1f5f9;padding:1px 5px;border-radius:4px;font-size:0.9em">POST /api/search</code>) with Pydantic v2 validation; containerized with Docker for portable, env-var-driven deployment.</li>
+                <li>Implemented <strong>full-page content extraction</strong> using trafilatura and BeautifulSoup4; supports geo-targeting (<code class="inline-code">--country</code>, <code class="inline-code">--language</code>) and date-range filtering for recency-aware research workflows.</li>
+                <li>Exposed a <strong>FastAPI REST server</strong> (<code class="inline-code">POST /api/search</code>) with Pydantic v2 validation; containerized with Docker for portable, env-var-driven deployment.</li>
                 <li>Outputs <strong>timestamped CSV reports</strong> with per-row provenance (query, country, language, URL, description, extracted content) suitable for downstream NLP and research pipelines.</li>
             </ul>
             <div class="project-links">
@@ -195,7 +195,7 @@
                 <li>Architected <strong>end-to-end agentic AI system embedded in Slack</strong> using Claude claude-sonnet-4-6 with native tool-use API; implemented autonomous reasoning loop (up to 10 iterations) enabling the agent to chain multiple tools per query without human intervention.</li>
                 <li>Built <strong>full RAG pipeline</strong>: embedded 221 document chunks with BAAI/bge-small-en-v1.5 (384-dim, CPU-only, zero-cost embeddings) and upserted directly to Upstash Vector; agent performs semantic retrieval at query time and Claude synthesises grounded answers.</li>
                 <li>Engineered <strong>7 callable tools</strong>: DuckDuckGo web search, sandboxed Python subprocess execution (15s timeout), RAG knowledge base, live weather, Slack channel history reader, URL content parser, and timezone-aware datetime.</li>
-                <li>Designed <strong>async task architecture with Celery + Redis</strong> so Django view returns HTTP 200 in under 100ms while worker processes the full agentic loop in background; per-thread conversation memory persisted in Django ORM keyed by <code style="background:#f1f5f9;padding:1px 5px;border-radius:4px;font-size:0.9em">thread_ts</code>/<code style="background:#f1f5f9;padding:1px 5px;border-radius:4px;font-size:0.9em">channel_id</code>.</li>
+                <li>Designed <strong>async task architecture with Celery + Redis</strong> so Django view returns HTTP 200 in under 100ms while worker processes the full agentic loop in background; per-thread conversation memory persisted in Django ORM keyed by <code class="inline-code">thread_ts</code>/<code class="inline-code">channel_id</code>.</li>
                 <li>Deployed <strong>two-service architecture on Railway</strong> (web + Celery worker); rich responses formatted as Slack Block Kit messages with per-tool attribution footer.</li>
             </ul>
             <div class="project-links">
