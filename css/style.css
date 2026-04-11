@@ -84,6 +84,9 @@ nav ul li a {
     letter-spacing: 1px;
     border-right: 1px solid var(--paper-gray);
     border-bottom: 3px solid transparent;
+    transition: border-bottom-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
 }
 
 nav ul li:last-child a {
@@ -92,8 +95,19 @@ nav ul li:last-child a {
 
 nav ul li a:hover,
 nav ul li a.active {
-    border-bottom-color: var(--ink-black);
-    font-weight: 700;
+    border-bottom-color: var(--neon-cyan);
+    background-color: var(--paper-gray);
+}
+
+nav ul li a:focus-visible,
+.btn:focus-visible,
+.project-link:focus-visible,
+.link-btn:focus-visible,
+.content-link:focus-visible,
+.contact-link:focus-visible,
+.collapsible:focus-visible {
+    outline: 2px solid var(--ink-black);
+    outline-offset: 2px;
 }
 
 /* Container */
@@ -213,17 +227,19 @@ nav ul li a.active {
 /* Hand-Drawn Buttons */
 .btn {
     display: inline-block;
-    padding: 14px 28px;
     border: 2px solid var(--ink-black);
+    padding: 10px 20px;
     text-decoration: none;
-    font-weight: 700;
     font-family: var(--font-heading);
+    font-weight: 700;
+    text-transform: uppercase;
     letter-spacing: 1px;
-    cursor: pointer;
     font-size: 0.85em;
     background: var(--paper-white);
     color: var(--ink-black);
     box-shadow: 3px 3px 0 var(--ink-black);
+    transition: all 0.2s ease;
+    will-change: transform, box-shadow;
 }
 
 .btn:hover {
@@ -402,7 +418,7 @@ h2::before {
 }
 
 .skill-card ul li::before {
-    content: '·';
+    content: '|';
     position: absolute;
     left: 0;
     color: var(--ink-black);
@@ -452,6 +468,12 @@ h2::before {
 .project-card {
     margin-bottom: 32px;
     overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
 .project-header {
@@ -524,7 +546,7 @@ h2::before {
 }
 
 .project-bullets li::before {
-    content: '→';
+    content: '->';
     position: absolute;
     left: 0;
     color: var(--ink-black);
@@ -557,6 +579,10 @@ h2::before {
     font-family: var(--font-heading);
     color: var(--ink-black);
     box-shadow: 2px 2px 0 var(--ink-black);
+    transition: all 0.2s ease;
+    will-change: transform, box-shadow;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
 }
 
 .project-link:hover {
@@ -640,6 +666,10 @@ h2::before {
     font-family: var(--font-heading);
     color: var(--ink-black);
     box-shadow: 2px 2px 0 var(--ink-black);
+    transition: all 0.2s ease;
+    will-change: transform, box-shadow;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
 }
 
 .link-btn:hover {
@@ -735,6 +765,15 @@ h2::before {
     justify-content: space-between;
     align-items: center;
     box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.15);
+    transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.15s ease;
+    will-change: background-color, transform;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+.collapsible:active {
+    transform: translate(1px, 1px);
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.15);
 }
 
 .collapsible:hover {
@@ -788,6 +827,16 @@ h2::before {
     color: var(--ink-black);
     font-family: var(--font-heading);
     font-weight: 700;
+    transition: transform 0.2s ease;
+    will-change: transform;
+}
+
+.chevron::before {
+    content: "+";
+}
+
+.collapsible.active .chevron::before {
+    content: "-";
 }
 
 .collapsible.active .chevron {
@@ -795,11 +844,22 @@ h2::before {
 }
 
 .content {
-    display: none;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
     background: var(--paper-white);
     border: 2px solid var(--ink-black);
     border-top: none;
+    padding: 0 20px;
+    transition: max-height 0.2s ease-out, opacity 0.2s ease, padding 0.2s ease;
+    will-change: max-height, opacity;
+    pointer-events: none;
+}
+
+.collapsible.active + .content {
+    opacity: 1;
     padding: 20px;
+    pointer-events: auto;
 }
 
 .content-inner {
@@ -835,7 +895,7 @@ h2::before {
 }
 
 .content ul li::before {
-    content: '→';
+    content: '->';
     position: absolute;
     left: 0;
     color: var(--ink-black);
@@ -1098,6 +1158,19 @@ footer p {
 
     h2 {
         font-size: 1em;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    nav ul li a,
+    .btn,
+    .project-card,
+    .project-link,
+    .link-btn,
+    .collapsible,
+    .chevron,
+    .content {
+        transition: none;
     }
 }
 
