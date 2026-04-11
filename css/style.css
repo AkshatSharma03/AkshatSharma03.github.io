@@ -81,10 +81,11 @@ nav ul li a {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 2px;
-    transition: all 0.2s;
+    transition: background-color 0.15s ease, color 0.15s ease;
     border-bottom: 4px solid transparent;
     margin-bottom: -4px;
     font-size: 0.9em;
+    will-change: background-color;
 }
 
 nav ul li:nth-child(1) a { border-bottom-color: var(--neon-pink); }
@@ -97,8 +98,6 @@ nav ul li a:hover,
 nav ul li a.active {
     background: var(--neon-pink);
     color: var(--text-light);
-    border-bottom-color: var(--text-dark);
-    transform: translateY(-3px);
 }
 
 /* Container */
