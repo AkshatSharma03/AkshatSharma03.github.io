@@ -27,22 +27,17 @@
                 <span class="badge">Full-Stack / AI</span>
             </div>
             <div class="tech-tags">
-                <span class="tag">React 18</span>
-                <span class="tag">TypeScript</span>
-                <span class="tag">Vite</span>
-                <span class="tag">Recharts</span>
-                <span class="tag">shadcn/ui</span>
-                <span class="tag">Express</span>
+                <span class="tag">React/TypeScript</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">LLMs</span>
                 <span class="tag">SQLite</span>
-                <span class="tag">Claude API</span>
+                <span class="tag">Data Visualization</span>
             </div>
             <ul class="project-bullets">
-                <li>Engineered <strong>full-stack data visualization platform</strong> with React 18 + Recharts frontend, Express 5 backend, and SQLite (better-sqlite3) -- five UI modes: Dashboard, Chat, Search, Analytics, and Data Upload.</li>
-                <li>Built a <strong>multi-source macroeconomic data pipeline</strong> covering 200+ countries, with World Bank -&gt; IMF -&gt; OECD fallback logic to maximize dataset coverage and resilience.</li>
-                <li>Designed <strong>strict TypeScript architecture with shadcn/ui + Radix UI</strong>; implemented drag-and-drop CSV parsing (RFC 4180 state machine) and SVG/HTML report export.</li>
-                <li>Built <strong>8 proprietary algorithms from scratch</strong>: OLS regression, CAGR, Hodrick-Prescott filter, Pearson correlation, HHI index, Z-score anomaly detection, K-Means++ clustering, and Trie autocomplete (O(m)).</li>
-                <li>Integrated <strong>Claude API with agentic tool-use loop</strong> (up to 8 turns) for dynamic chart generation; implemented two-layer caching (in-memory LRU + SQLite persistent cache) to reduce repeat API latency.</li>
-                <li>Deployed to <strong>production on Railway</strong>; rate limiting (20 req/15m per IP), Helmet.js security headers, JWT auth with bcryptjs; Vite 5 build with sub-second response times.</li>
+                <li>Built a <strong>full-stack economic analytics platform</strong> that integrates live macroeconomic data from 6+ authoritative sources (World Bank, IMF, UN Comtrade, OECD, OEC, FRED), enabling cross-country comparison of GDP, trade flows, and sector-level indicators with verifiable provenance.</li>
+                <li>Engineered an <strong>eight-algorithm statistical engine</strong> (regression with prediction intervals, CAGR, HP filter, correlation, Herfindahl-Hirschman Index, anomaly detection, K-Means clustering, trade-openness) to surface quantitative economic insights on demand.</li>
+                <li>Integrated an <strong>LLM-driven analysis layer (Claude)</strong> that generates interactive visualizations and expert commentary from natural-language prompts, paired with citation-backed web research (Kagi FastGPT) to keep AI outputs grounded and traceable to sources.</li>
+                <li>Designed a <strong>secure modular-monolith backend</strong> (Express, SQLite sessions, LRU caching, rate limiting, Helmet, Clerk auth) and exportable HTML/CSV/JSON reporting for reproducible, auditable analysis.</li>
             </ul>
             <div class="project-links">
                 <a href="https://super-dash-production.up.railway.app/" target="_blank" rel="noopener noreferrer" class="project-link">Live Demo -></a>
