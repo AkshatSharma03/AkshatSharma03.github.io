@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Selected AI evaluation, data, and software projects by Akshat Sharma.">
+    <meta name="description" content="AI evaluation, research, data, full-stack, and machine-learning projects by Akshat Sharma.">
     <title>Projects | Akshat Sharma</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css">
@@ -25,11 +25,11 @@
     <main class="container" id="main-content">
         <div class="page-header">
             <p class="eyebrow">Selected work</p>
-            <h1>Projects built for<br><span>evidence &amp; impact</span></h1>
-            <p>Evaluation platforms, research infrastructure, and applied AI systems designed to make assumptions visible and outputs useful.</p>
+            <h1>Research ideas,<br><span>working systems</span></h1>
+            <p>A complete selection of AI evaluation, research, product, full-stack, data, and machine-learning work.</p>
         </div>
 
-        <section class="project-list" aria-label="Selected projects">
+        <section class="project-list" aria-label="Selected projects and initiatives">
             <article class="project-card project-card-featured">
                 <div class="project-index">01</div>
                 <div class="project-content">
@@ -62,18 +62,20 @@
                             <p class="card-label">Economic analysis</p>
                             <h2 class="project-title">Economic Intelligence Dashboard</h2>
                         </div>
-                        <span class="badge">Full-stack AI</span>
+                        <span class="badge">Full-stack / AI</span>
                     </div>
                     <div class="tech-tags" aria-label="Technologies">
                         <span class="tag">React / TypeScript</span>
                         <span class="tag">Node.js</span>
                         <span class="tag">LLMs</span>
+                        <span class="tag">SQLite</span>
                         <span class="tag">Data visualization</span>
                     </div>
                     <ul class="project-bullets">
-                        <li>Built a full-stack economic analytics platform integrating live macroeconomic data from the World Bank, IMF, UN Comtrade, OECD, OEC, and FRED with verifiable provenance.</li>
-                        <li>Engineered an eight-algorithm statistical engine spanning regression, CAGR, HP filter, correlation, HHI, anomaly detection, K-Means clustering, and trade openness.</li>
-                        <li>Added an LLM analysis layer for prompt-driven visualizations and grounded commentary, with exportable reporting for reproducible analysis.</li>
+                        <li>Built a <strong>full-stack economic analytics platform</strong> that integrates live macroeconomic data from 6+ authoritative sources (World Bank, IMF, UN Comtrade, OECD, OEC, FRED), enabling cross-country comparison of GDP, trade flows, and sector-level indicators with verifiable provenance.</li>
+                        <li>Engineered an <strong>eight-algorithm statistical engine</strong> (regression with prediction intervals, CAGR, HP filter, correlation, Herfindahl-Hirschman Index, anomaly detection, K-Means clustering, trade-openness) to surface quantitative economic insights on demand.</li>
+                        <li>Integrated an <strong>LLM-driven analysis layer (Claude)</strong> that generates interactive visualizations and expert commentary from natural-language prompts, paired with citation-backed web research (Kagi FastGPT) to keep AI outputs grounded and traceable to sources.</li>
+                        <li>Designed a <strong>secure modular-monolith backend</strong> (Express, SQLite sessions, LRU caching, rate limiting, Helmet, Clerk auth) and exportable HTML/CSV/JSON reporting for reproducible, auditable analysis.</li>
                     </ul>
                     <div class="project-links">
                         <a class="text-link" href="https://super-dash-production.up.railway.app/" target="_blank" rel="noopener noreferrer">Live demo <span aria-hidden="true">↗</span></a>
@@ -88,7 +90,7 @@
                     <div class="project-header">
                         <div>
                             <p class="card-label">Agentic AI</p>
-                            <h2 class="project-title">Pravaha — Slack AI Assistant</h2>
+                            <h2 class="project-title">Pravaha — Agentic Slack AI Assistant</h2>
                         </div>
                         <span class="badge">RAG &amp; agents</span>
                     </div>
@@ -98,15 +100,18 @@
                         <span class="tag">Celery</span>
                         <span class="tag">Redis</span>
                         <span class="tag">Claude API</span>
+                        <span class="tag">RAG</span>
                     </div>
                     <ul class="project-bullets">
-                        <li>Architected an agentic AI system embedded in Slack with a multi-tool reasoning loop and persistent, thread-scoped conversation memory.</li>
-                        <li>Built a RAG pipeline over a vectorized knowledge base and seven callable tools spanning retrieval, web research, computation, and workspace context.</li>
-                        <li>Designed an asynchronous two-service architecture so requests return quickly while the full agentic workflow runs in the background.</li>
+                        <li>Architected an <strong>end-to-end agentic AI system embedded in Slack</strong> using Claude with native tool use; implemented an autonomous reasoning loop of up to 10 iterations so the agent can chain multiple tools per query.</li>
+                        <li>Built a <strong>full RAG pipeline</strong>: embedded 221 document chunks with BAAI/bge-small-en-v1.5 (384 dimensions, CPU-only) and upserted them to Upstash Vector for semantic retrieval and grounded synthesis.</li>
+                        <li>Engineered <strong>seven callable tools</strong>: web search, sandboxed Python execution, RAG knowledge base, live weather, Slack channel history, URL content parsing, and timezone-aware datetime.</li>
+                        <li>Designed an <strong>asynchronous architecture with Celery and Redis</strong> so the Django view returns HTTP 200 in under 100ms while a worker processes the agentic loop; persisted per-thread memory in Django ORM.</li>
+                        <li>Deployed a <strong>two-service architecture on Railway</strong> (web and Celery worker), formatting rich responses as Slack Block Kit messages with per-tool attribution.</li>
                     </ul>
                     <div class="project-links">
                         <a class="text-link" href="https://github.com/AkshatSharma03/Slack_ai_pravaha" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
-                        <a class="text-link" href="https://youtu.be/n_Shq6aPSbI" target="_blank" rel="noopener noreferrer">Demo <span aria-hidden="true">↗</span></a>
+                        <a class="text-link" href="https://youtu.be/n_Shq6aPSbI" target="_blank" rel="noopener noreferrer">Video demo <span aria-hidden="true">↗</span></a>
                     </div>
                 </div>
             </article>
@@ -125,11 +130,16 @@
                         <span class="tag">Next.js</span>
                         <span class="tag">Node.js</span>
                         <span class="tag">PostgreSQL</span>
+                        <span class="tag">tRPC</span>
                         <span class="tag">OpenAI API</span>
                     </div>
                     <ul class="project-bullets">
-                        <li>Co-founded and led technical development of a multi-workstream software product across engineering, design, and product work.</li>
-                        <li>Established software-development practices with automated testing, CI/CD pipelines, and KPI dashboards for system health and development progress.</li>
+                        <li>Architected and shipped a <strong>production full-stack web application</strong> (Next.js frontend, Node.js/Express backend, PostgreSQL database, tRPC type-safe API layer) from concept to Railway deployment.</li>
+                        <li>Designed the <strong>React component hierarchy and state management</strong>, implementing a responsive UI with real-time updates and optimistic client-side caching.</li>
+                        <li>Built <strong>REST API endpoints in Node.js</strong> with error handling, request validation, rate limiting, and JWT authentication; integrated the OpenAI API for conversational features.</li>
+                        <li>Designed a <strong>PostgreSQL schema for relational data modeling</strong>, implementing database migrations and query optimization for performance at scale.</li>
+                        <li>Set up a <strong>CI/CD deployment workflow and production monitoring</strong> with Sentry to track and triage runtime issues after launch.</li>
+                        <li>Earned acceptance into BU’s competitive Innovation Pathway program and investor recommendations for market readiness and technical execution.</li>
                     </ul>
                     <div class="project-links">
                         <a class="text-link" href="https://www.bu.edu/innovate/profile/goniva/" target="_blank" rel="noopener noreferrer">Innovation profile <span aria-hidden="true">↗</span></a>
@@ -144,22 +154,99 @@
                     <div class="project-header">
                         <div>
                             <p class="card-label">Research infrastructure</p>
-                            <h2 class="project-title">Multi-Region Search Research Tool</h2>
+                            <h2 class="project-title">Google Search Scraper</h2>
                         </div>
-                        <span class="badge">Data collection</span>
+                        <span class="badge">Python / API tool</span>
                     </div>
                     <div class="tech-tags" aria-label="Technologies">
                         <span class="tag">Python</span>
                         <span class="tag">FastAPI</span>
-                        <span class="tag">BeautifulSoup</span>
+                        <span class="tag">BeautifulSoup4</span>
+                        <span class="tag">Serper.dev</span>
+                        <span class="tag">trafilatura</span>
                         <span class="tag">Docker</span>
                     </div>
                     <ul class="project-bullets">
-                        <li>Built a research tool for extracting search results across countries and languages with batch processing, date filters, and full-page content extraction.</li>
-                        <li>Produced provenance-rich CSV outputs suitable for downstream NLP and information-integrity research workflows.</li>
+                        <li>Built a <strong>Python tool for extracting Google search results</strong> across multiple countries and languages through the Serper.dev API, supporting individual queries, batch CSV/JSON processing, and a REST endpoint.</li>
+                        <li>Implemented <strong>full-page content extraction</strong> with trafilatura and BeautifulSoup4, including geo-targeting and date-range filtering for recency-aware research.</li>
+                        <li>Exposed a <strong>FastAPI REST server</strong> with Pydantic v2 validation and containerized it with Docker for portable, environment-variable-driven deployment.</li>
+                        <li>Produced <strong>timestamped CSV reports</strong> with per-row provenance—query, country, language, URL, description, and extracted content—for downstream NLP workflows.</li>
                     </ul>
                     <div class="project-links">
                         <a class="text-link" href="https://github.com/AkshatSharma03/web-scraper" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-index">06</div>
+                <div class="project-content">
+                    <div class="project-header">
+                        <div>
+                            <p class="card-label">AI &amp; algorithms</p>
+                            <h2 class="project-title">Pacman Game AI Agent</h2>
+                        </div>
+                        <span class="badge">Search systems</span>
+                    </div>
+                    <div class="tech-tags" aria-label="Technologies">
+                        <span class="tag">Java</span>
+                        <span class="tag">Data structures</span>
+                        <span class="tag">Graph algorithms</span>
+                        <span class="tag">System design</span>
+                    </div>
+                    <ul class="project-bullets">
+                        <li>Implemented an <strong>optimal pathfinding system using A* and Dijkstra algorithms</strong> on complex state-space graphs, with vertices representing game states.</li>
+                        <li>Built a <strong>heuristic function satisfying consistency and admissibility constraints</strong> and optimized search performance through algorithm selection and state representation.</li>
+                        <li>Engineered a solution for <strong>adversarial ghost-agent dynamics</strong> with risk-aware pathfinding while maintaining correctness across board configurations and difficulty levels.</li>
+                        <li>Applied systems thinking relevant to backend optimization, database query planning, and distributed-system design.</li>
+                    </ul>
+                    <div class="project-links">
+                        <a class="text-link" href="https://github.com/AkshatSharma03/CS440" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+                        <a class="text-link" href="https://youtu.be/jb2v1sPYw3Y" target="_blank" rel="noopener noreferrer">Video demo <span aria-hidden="true">↗</span></a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-index">07</div>
+                <div class="project-content">
+                    <div class="project-header">
+                        <div>
+                            <p class="card-label">Healthcare AI research</p>
+                            <h2 class="project-title">Medical Imaging — Mammo-CLIP</h2>
+                        </div>
+                        <span class="badge">Research / ML</span>
+                    </div>
+                    <div class="tech-tags" aria-label="Technologies">
+                        <span class="tag">PyTorch</span>
+                        <span class="tag">CLIP</span>
+                        <span class="tag">Scikit-learn</span>
+                    </div>
+                    <ul class="project-bullets">
+                        <li>Fine-tuned multimodal models for <strong>breast-cancer detection</strong> and implemented bias-detection frameworks to improve clinical accuracy across demographic groups.</li>
+                        <li>Benchmarked model performance across <strong>40,000+ medical images</strong> using OpenAI’s CLIP model for zero-shot annotation and validation.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-index">08</div>
+                <div class="project-content">
+                    <div class="project-header">
+                        <div>
+                            <p class="card-label">International engagement</p>
+                            <h2 class="project-title">Guest Lecturer — Global AI Perspectives</h2>
+                        </div>
+                        <span class="badge">International advisory</span>
+                    </div>
+                    <ul class="project-bullets">
+                        <li>Presented at a <strong>government-affiliated AI seminar</strong> on global AI ecosystem dynamics, frontier-model capabilities, and the competitive landscape between the United States and emerging markets.</li>
+                        <li>Delivered <strong>policy-oriented analysis of AI governance frameworks</strong>, compute controls, and liability mechanisms for managing AI risk at scale.</li>
+                        <li>Facilitated <strong>cross-border dialogue with international stakeholders</strong> on evidence-based AI adoption, distinguishing hype from capability, and balancing innovation with safety.</li>
+                        <li>Bridged technical depth in model architectures and training dynamics with policy implications involving market structure, competitive advantage, and regulatory design.</li>
+                    </ul>
+                    <div class="project-links">
+                        <a class="text-link" href="https://www.instagram.com/p/DTXGPr1DChq/" target="_blank" rel="noopener noreferrer">Event coverage <span aria-hidden="true">↗</span></a>
                     </div>
                 </div>
             </article>
