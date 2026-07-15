@@ -135,8 +135,46 @@ nav ul a.active {
 }
 
 .hero > * {
-    max-width: 790px;
     position: relative;
+    z-index: 1;
+}
+
+.hero-layout {
+    align-items: center;
+    display: grid;
+    gap: clamp(2.5rem, 5vw, 5rem);
+    grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.7fr);
+}
+
+.hero-content {
+    max-width: 720px;
+}
+
+.hero-content h1 {
+    font-size: clamp(3.2rem, 5.6vw, 5.2rem);
+}
+
+.hero-portrait {
+    margin: 0;
+    position: relative;
+}
+
+.hero-portrait::before {
+    background: var(--blue-pale);
+    border: 1px solid #cbdced;
+    content: "";
+    inset: 16px -16px -16px 16px;
+    position: absolute;
+}
+
+.hero-portrait img {
+    aspect-ratio: 4 / 5;
+    border: 1px solid var(--line);
+    display: block;
+    height: auto;
+    object-fit: cover;
+    position: relative;
+    width: 100%;
     z-index: 1;
 }
 
@@ -256,6 +294,10 @@ nav ul a.active {
     line-height: 1.65;
 }
 
+.about-copy > p + p {
+    margin-top: 1.25rem;
+}
+
 .research-interests {
     border-left: 2px solid var(--blue);
     color: var(--ink-soft);
@@ -276,6 +318,45 @@ nav ul a.active {
     gap: 2rem;
     justify-content: space-between;
     margin-bottom: 2.5rem;
+}
+
+.section-note {
+    color: var(--muted);
+    font-size: 0.88rem;
+    max-width: 340px;
+}
+
+.capabilities-grid {
+    background: var(--line);
+    border: 1px solid var(--line);
+    display: grid;
+    gap: 1px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.capability-card {
+    background: var(--paper);
+    min-height: 225px;
+    padding: 1.75rem;
+}
+
+.capability-number {
+    color: var(--blue);
+    font-family: var(--serif);
+    font-size: 0.85rem;
+}
+
+.capability-card h3 {
+    font-family: var(--serif);
+    font-size: 1.55rem;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    margin: 2.25rem 0 0.75rem;
+}
+
+.capability-card > p:last-child {
+    color: var(--ink-soft);
+    font-size: 0.88rem;
 }
 
 .text-link {
@@ -794,6 +875,16 @@ footer a {
         padding: 78px 0 72px;
     }
 
+    .hero-layout {
+        align-items: start;
+        gap: 3.5rem;
+        grid-template-columns: minmax(0, 1.25fr) minmax(220px, 0.75fr);
+    }
+
+    .hero-content h1 {
+        font-size: clamp(3rem, 7.5vw, 4.25rem);
+    }
+
     .intro-grid,
     .education-row {
         gap: 2.5rem;
@@ -802,6 +893,10 @@ footer a {
 
     .feature-card-wide {
         min-height: 460px;
+    }
+
+    .capabilities-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .stats-band {
@@ -853,6 +948,16 @@ footer a {
         font-size: clamp(2.8rem, 15vw, 4.3rem);
     }
 
+    .hero-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-portrait {
+        margin-right: 16px;
+        max-width: 300px;
+        order: -1;
+    }
+
     .section,
     .experience-section {
         padding: 64px 0;
@@ -864,6 +969,10 @@ footer a {
     }
 
     .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .capabilities-grid {
         grid-template-columns: 1fr;
     }
 
