@@ -326,7 +326,7 @@ nav ul a.active {
     max-width: 340px;
 }
 
-.capabilities-grid {
+.role-grid {
     background: var(--line);
     border: 1px solid var(--line);
     display: grid;
@@ -334,29 +334,48 @@ nav ul a.active {
     grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.capability-card {
+.role-card {
     background: var(--paper);
-    min-height: 225px;
-    padding: 1.75rem;
+    min-height: 330px;
+    padding: 2rem;
 }
 
-.capability-number {
+.role-status {
     color: var(--blue);
-    font-family: var(--serif);
-    font-size: 0.85rem;
+    font-size: 0.72rem;
+    font-weight: 750;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
 }
 
-.capability-card h3 {
+.role-card h3 {
     font-family: var(--serif);
-    font-size: 1.55rem;
+    font-size: 1.65rem;
     font-weight: 400;
     letter-spacing: -0.025em;
-    margin: 2.25rem 0 0.75rem;
+    line-height: 1.2;
+    margin: 2.5rem 0 0.35rem;
 }
 
-.capability-card > p:last-child {
+.role-card h3 a {
+    color: var(--ink);
+    text-decoration: none;
+}
+
+.role-card h3 a:hover {
+    color: var(--blue);
+}
+
+.role-title {
+    color: var(--blue);
+    font-size: 0.82rem;
+    font-weight: 700;
+    margin-bottom: 1.35rem;
+}
+
+.role-card > p:last-child {
     color: var(--ink-soft);
-    font-size: 0.88rem;
+    font-size: 0.9rem;
 }
 
 .text-link {
@@ -555,7 +574,7 @@ nav ul a.active {
 .entry-body li::before,
 .project-bullets li::before {
     color: var(--blue);
-    content: "—";
+    content: "•";
     left: 0;
     position: absolute;
 }
@@ -578,6 +597,14 @@ nav ul a.active {
     gap: 3.5rem;
     grid-template-columns: 180px minmax(0, 1fr);
     padding: 2.75rem 0 3.5rem;
+}
+
+.research-note {
+    color: var(--ink-soft);
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    margin: 1rem 0 2.75rem;
+    max-width: 680px;
 }
 
 .publication-card > div:last-child {
@@ -895,8 +922,12 @@ footer a {
         min-height: 460px;
     }
 
-    .capabilities-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+    .role-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .role-card {
+        min-height: 0;
     }
 
     .stats-band {
@@ -969,10 +1000,6 @@ footer a {
     }
 
     .feature-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .capabilities-grid {
         grid-template-columns: 1fr;
     }
 
