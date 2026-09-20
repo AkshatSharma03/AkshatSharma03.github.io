@@ -287,6 +287,11 @@ nav ul a.active {
     grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
 }
 
+.education-row {
+    gap: 0.5rem;
+    grid-template-columns: 1fr;
+}
+
 .about-copy {
     color: var(--ink-soft);
     font-family: var(--serif);
