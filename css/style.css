@@ -21,6 +21,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 100px;
 }
 
 body {
@@ -123,7 +124,7 @@ nav ul a.active {
     background-position: right top;
     background-size: 42px 42px;
     border-bottom: 1px solid var(--line);
-    padding: 112px 0 104px;
+    padding: clamp(56px, 7vw, 88px) 0;
     position: relative;
 }
 
@@ -150,8 +151,9 @@ nav ul a.active {
     max-width: 720px;
 }
 
-.hero-content h1 {
-    font-size: clamp(3.2rem, 5.6vw, 5.2rem);
+.hero .hero-content h1 {
+    font-size: clamp(2.6rem, 5.3vw, 4.6rem);
+    white-space: nowrap;
 }
 
 .hero-portrait {
@@ -198,8 +200,12 @@ nav ul a.active {
     font-size: clamp(3.4rem, 7vw, 6.5rem);
     font-weight: 400;
     letter-spacing: -0.055em;
-    line-height: 0.97;
+    line-height: 1.08;
     margin: 1.4rem 0 2rem;
+}
+
+.contact-hero h1 {
+    font-size: clamp(2.5rem, 5.5vw, 4.2rem);
 }
 
 .hero h1 span,
@@ -341,7 +347,7 @@ nav ul a.active {
 
 .role-card {
     background: var(--paper);
-    min-height: 330px;
+    min-height: 0;
     padding: 2rem;
 }
 
@@ -359,7 +365,7 @@ nav ul a.active {
     font-weight: 400;
     letter-spacing: -0.025em;
     line-height: 1.2;
-    margin: 2.5rem 0 0.35rem;
+    margin: 1.5rem 0 0.35rem;
 }
 
 .role-card h3 a {
@@ -405,13 +411,13 @@ nav ul a.active {
 
 .feature-card {
     background: var(--paper);
-    min-height: 285px;
+    min-height: 0;
     padding: 2rem;
 }
 
 .feature-card-wide {
     grid-row: span 2;
-    min-height: 570px;
+    min-height: 0;
     padding: 3rem;
 }
 
@@ -426,7 +432,7 @@ nav ul a.active {
 
 .feature-card-wide h3 {
     font-size: clamp(2.4rem, 4vw, 3.4rem);
-    margin-top: 3.8rem;
+    margin-top: 2rem;
     max-width: 530px;
 }
 
@@ -501,11 +507,11 @@ nav ul a.active {
 
 .page-header {
     border-bottom: 1px solid var(--line);
-    padding: 96px 0 72px;
+    padding: clamp(48px, 6vw, 72px) 0 48px;
 }
 
 .page-header h1 {
-    font-size: clamp(3.3rem, 7vw, 5.9rem);
+    font-size: clamp(2.5rem, 5.5vw, 4.2rem);
     margin-bottom: 1.5rem;
 }
 
@@ -662,8 +668,14 @@ nav ul a.active {
 .project-header {
     align-items: start;
     display: flex;
-    gap: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
     justify-content: space-between;
+}
+
+.project-header > div {
+    flex: 1 1 26rem;
+    min-width: 0;
 }
 
 .project-title {
@@ -684,6 +696,7 @@ nav ul a.active {
     font-weight: 700;
     letter-spacing: 0.08em;
     padding: 0.45rem 0.65rem;
+    white-space: nowrap;
     text-transform: uppercase;
 }
 
@@ -719,7 +732,7 @@ nav ul a.active {
 
 .contact-hero {
     border-bottom: 1px solid var(--line);
-    padding: 110px 0 78px;
+    padding: clamp(48px, 6vw, 72px) 0 48px;
 }
 
 .contact-hero > p:last-child {
@@ -913,8 +926,8 @@ footer a {
         grid-template-columns: minmax(0, 1.25fr) minmax(220px, 0.75fr);
     }
 
-    .hero-content h1 {
-        font-size: clamp(3rem, 7.5vw, 4.25rem);
+    .hero .hero-content h1 {
+        font-size: clamp(2.5rem, 5.5vw, 3.5rem);
     }
 
     .intro-grid,
@@ -924,7 +937,7 @@ footer a {
     }
 
     .feature-card-wide {
-        min-height: 460px;
+        min-height: 0;
     }
 
     .role-grid {
@@ -981,17 +994,39 @@ footer a {
     .hero h1,
     .page-header h1,
     .contact-hero h1 {
-        font-size: clamp(2.8rem, 15vw, 4.3rem);
+        font-size: clamp(2.2rem, 9vw, 3.2rem);
     }
 
     .hero-layout {
+        gap: 2.5rem;
         grid-template-columns: 1fr;
+    }
+
+    .hero .hero-content h1 {
+        font-size: clamp(2.5rem, 12vw, 4rem);
+    }
+
+    .hero-actions {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 1.5rem;
+    }
+
+    nav ul {
+        gap: 0;
+        justify-content: space-between;
+        overflow: visible;
+    }
+
+    nav ul a {
+        min-height: 44px;
+        font-size: 0.8rem;
     }
 
     .hero-portrait {
         margin-right: 16px;
         max-width: 300px;
-        order: -1;
+        order: 0;
     }
 
     .section,
@@ -1010,7 +1045,7 @@ footer a {
 
     .feature-card-wide {
         grid-row: auto;
-        min-height: 420px;
+        min-height: 0;
         padding: 2rem;
     }
 
@@ -1019,7 +1054,7 @@ footer a {
     }
 
     .page-header {
-        padding: 72px 0 54px;
+        padding: 48px 0 36px;
     }
 
     .project-card,
@@ -1035,8 +1070,15 @@ footer a {
     }
 
     .project-header {
-        flex-direction: column;
         gap: 1rem;
+    }
+
+    .project-header > div {
+        flex-basis: 100%;
+    }
+
+    .contact-cta {
+        padding: 1.5rem;
     }
 
     .project-index {
@@ -1044,7 +1086,7 @@ footer a {
     }
 
     .contact-hero {
-        padding: 72px 0 54px;
+        padding: 48px 0 36px;
     }
 
     .contact-link {
